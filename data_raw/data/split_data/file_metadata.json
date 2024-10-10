@@ -1,0 +1,425 @@
+[
+    {
+        "file_name": "file_9.CSV",
+        "split": "train",
+        "condition": [
+            175,
+            3000,
+            2250
+        ]
+    },
+    {
+        "file_name": "file_4.CSV",
+        "split": "train",
+        "condition": [
+            150,
+            3000,
+            3750
+        ]
+    },
+    {
+        "file_name": "file_7.CSV",
+        "split": "train",
+        "condition": [
+            175,
+            2000,
+            3375
+        ]
+    },
+    {
+        "file_name": "file_41.CSV",
+        "split": "train",
+        "condition": [
+            225,
+            4500,
+            2625
+        ]
+    },
+    {
+        "file_name": "file_34.CSV",
+        "split": "train",
+        "condition": [
+            200,
+            3500,
+            3375
+        ]
+    },
+    {
+        "file_name": "file_14.CSV",
+        "split": "train",
+        "condition": [
+            200,
+            3000,
+            2625
+        ]
+    },
+    {
+        "file_name": "file_18.CSV",
+        "split": "train",
+        "condition": [
+            225,
+            2500,
+            2625
+        ]
+    },
+    {
+        "file_name": "file_45.CSV",
+        "split": "train",
+        "condition": [
+            250,
+            4000,
+            2625
+        ]
+    },
+    {
+        "file_name": "file_16.CSV",
+        "split": "train",
+        "condition": [
+            225,
+            1500,
+            3750
+        ]
+    },
+    {
+        "file_name": "file_10.CSV",
+        "split": "train",
+        "condition": [
+            200,
+            1000,
+            3000
+        ]
+    },
+    {
+        "file_name": "file_17.CSV",
+        "split": "train",
+        "condition": [
+            225,
+            2000,
+            2250
+        ]
+    },
+    {
+        "file_name": "file_30.CSV",
+        "split": "train",
+        "condition": [
+            175,
+            4000,
+            3375
+        ]
+    },
+    {
+        "file_name": "file_33.CSV",
+        "split": "train",
+        "condition": [
+            200,
+            3000,
+            3000
+        ]
+    },
+    {
+        "file_name": "file_46.CSV",
+        "split": "train",
+        "condition": [
+            250,
+            4500,
+            3000
+        ]
+    },
+    {
+        "file_name": "file_1.CSV",
+        "split": "train",
+        "condition": [
+            150,
+            1500,
+            2625
+        ]
+    },
+    {
+        "file_name": "file_32.CSV",
+        "split": "train",
+        "condition": [
+            175,
+            5000,
+            2250
+        ]
+    },
+    {
+        "file_name": "file_31.CSV",
+        "split": "train",
+        "condition": [
+            175,
+            4500,
+            3750
+        ]
+    },
+    {
+        "file_name": "file_6.CSV",
+        "split": "train",
+        "condition": [
+            175,
+            1500,
+            3000
+        ]
+    },
+    {
+        "file_name": "file_12.CSV",
+        "split": "train",
+        "condition": [
+            200,
+            2000,
+            3750
+        ]
+    },
+    {
+        "file_name": "file_35.CSV",
+        "split": "train",
+        "condition": [
+            200,
+            4000,
+            3750
+        ]
+    },
+    {
+        "file_name": "file_2.CSV",
+        "split": "train",
+        "condition": [
+            150,
+            2000,
+            3000
+        ]
+    },
+    {
+        "file_name": "file_42.CSV",
+        "split": "train",
+        "condition": [
+            225,
+            5000,
+            3000
+        ]
+    },
+    {
+        "file_name": "file_22.CSV",
+        "split": "train",
+        "condition": [
+            250,
+            2000,
+            2625
+        ]
+    },
+    {
+        "file_name": "file_3.CSV",
+        "split": "train",
+        "condition": [
+            150,
+            2500,
+            3375
+        ]
+    },
+    {
+        "file_name": "file_36.CSV",
+        "split": "train",
+        "condition": [
+            200,
+            4500,
+            2250
+        ]
+    },
+    {
+        "file_name": "file_24.CSV",
+        "split": "train",
+        "condition": [
+            250,
+            3000,
+            3375
+        ]
+    },
+    {
+        "file_name": "file_38.CSV",
+        "split": "train",
+        "condition": [
+            225,
+            3000,
+            3375
+        ]
+    },
+    {
+        "file_name": "file_11.CSV",
+        "split": "train",
+        "condition": [
+            200,
+            1500,
+            3375
+        ]
+    },
+    {
+        "file_name": "file_23.CSV",
+        "split": "train",
+        "condition": [
+            250,
+            2500,
+            3000
+        ]
+    },
+    {
+        "file_name": "file_19.CSV",
+        "split": "train",
+        "condition": [
+            225,
+            3000,
+            3000
+        ]
+    },
+    {
+        "file_name": "file_47.CSV",
+        "split": "train",
+        "condition": [
+            250,
+            5000,
+            3375
+        ]
+    },
+    {
+        "file_name": "file_21.CSV",
+        "split": "train",
+        "condition": [
+            250,
+            1500,
+            2250
+        ]
+    },
+    {
+        "file_name": "file_8.CSV",
+        "split": "train",
+        "condition": [
+            175,
+            2500,
+            3750
+        ]
+    },
+    {
+        "file_name": "file_43.CSV",
+        "split": "train",
+        "condition": [
+            250,
+            3000,
+            3750
+        ]
+    },
+    {
+        "file_name": "file_15.CSV",
+        "split": "train",
+        "condition": [
+            225,
+            1000,
+            3375
+        ]
+    },
+    {
+        "file_name": "file_29.CSV",
+        "split": "train",
+        "condition": [
+            175,
+            3500,
+            3000
+        ]
+    },
+    {
+        "file_name": "file_39.CSV",
+        "split": "train",
+        "condition": [
+            225,
+            3500,
+            3750
+        ]
+    },
+    {
+        "file_name": "file_28.CSV",
+        "split": "valid",
+        "condition": [
+            175,
+            3000,
+            2625
+        ]
+    },
+    {
+        "file_name": "file_40.CSV",
+        "split": "valid",
+        "condition": [
+            225,
+            4000,
+            2250
+        ]
+    },
+    {
+        "file_name": "file_27.CSV",
+        "split": "valid",
+        "condition": [
+            150,
+            5000,
+            3750
+        ]
+    },
+    {
+        "file_name": "file_44.CSV",
+        "split": "valid",
+        "condition": [
+            250,
+            3500,
+            2250
+        ]
+    },
+    {
+        "file_name": "file_25.CSV",
+        "split": "valid",
+        "condition": [
+            150,
+            4000,
+            3000
+        ]
+    },
+    {
+        "file_name": "file_37.CSV",
+        "split": "valid",
+        "condition": [
+            200,
+            5000,
+            2625
+        ]
+    },
+    {
+        "file_name": "file_13.CSV",
+        "split": "valid",
+        "condition": [
+            200,
+            2500,
+            2250
+        ]
+    },
+    {
+        "file_name": "file_20.CSV",
+        "split": "valid",
+        "condition": [
+            250,
+            1000,
+            3750
+        ]
+    },
+    {
+        "file_name": "file_5.CSV",
+        "split": "valid",
+        "condition": [
+            175,
+            1000,
+            2625
+        ]
+    },
+    {
+        "file_name": "file_26.CSV",
+        "split": "valid",
+        "condition": [
+            150,
+            4500,
+            3375
+        ]
+    }
+]
