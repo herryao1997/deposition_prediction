@@ -3,7 +3,7 @@
 dataloader.py
 
 Load the dataset from the normalized JSON file created by preprocess.py.
-This file defines the FluxDataset class, which is a PyTorch Dataset that
+This file defines the DepositDataset class, which is a PyTorch Dataset that
 handles the loading of condition and output data for the training and
 evaluation of machine learning models.
 

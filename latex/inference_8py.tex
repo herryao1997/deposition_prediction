@@ -1,0 +1,39 @@
+\hypertarget{inference_8py}{}\doxysection{inference.\+py File Reference}
+\label{inference_8py}\index{inference.py@{inference.py}}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespaceinference}{inference}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+None \mbox{\hyperlink{namespaceinference_aa06d5f0353f879be2f427e3fce89d911}{inference.\+inference}} (cgan.\+Generator model, \mbox{\hyperlink{classutils_1_1Params}{utils.\+Params}} params, list condition, str location\+\_\+csv, str output\+\_\+folder, scaler\+\_\+condition, scaler\+\_\+output, str coordinate\+\_\+type)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespaceinference_ab31588c543457ebe7ba62ffcff222884}{inference.\+parser}} = argparse.\+Argument\+Parser()
+\item 
+\mbox{\hyperlink{namespaceinference_a57022e12b37ab04345b633b4cbf5dd30}{inference.\+default}}
+\item 
+\mbox{\hyperlink{namespaceinference_a760989678ef55317c08a0a2dd6615e4f}{inference.\+help}}
+\item 
+\mbox{\hyperlink{namespaceinference_a6b0cd3d1be6fb0b76d8f1c46af853dc9}{inference.\+args}} = parser.\+parse\+\_\+args()
+\item 
+\mbox{\hyperlink{namespaceinference_a22c269ca05e27206f2fc065405415d56}{inference.\+params}} = \mbox{\hyperlink{classutils_1_1Params}{utils.\+Params}}(args.\+params\+\_\+path)
+\item 
+\mbox{\hyperlink{namespaceinference_a790bc9ca93ff600fac98629357678e76}{inference.\+cuda}}
+\item 
+\mbox{\hyperlink{namespaceinference_ab5ea03382b07e65335306d9f924c2944}{inference.\+scaler\+\_\+condition}} = joblib.\+load(os.\+path.\+join(args.\+data\+\_\+dir, \textquotesingle{}scaler\+\_\+condition.\+pkl\textquotesingle{}))
+\item 
+\mbox{\hyperlink{namespaceinference_ad22cb32e92385acd46c0e788525e3622}{inference.\+scaler\+\_\+output}} = joblib.\+load(os.\+path.\+join(args.\+data\+\_\+dir, \textquotesingle{}scaler\+\_\+output.\+pkl\textquotesingle{}))
+\item 
+\mbox{\hyperlink{namespaceinference_aabd2bc6fea684f0c11304eb7ff6e99a9}{inference.\+model}} = cgan.\+Generator(params)
+\item 
+\mbox{\hyperlink{namespaceinference_a0d65a5c4d72b10f0f9efaa823edf4964}{inference.\+checkpoint\+\_\+dir}} = os.\+path.\+join(args.\+test\+\_\+dir, \textquotesingle{}checkpoints\textquotesingle{})
+\item 
+\mbox{\hyperlink{namespaceinference_a5e721199d73e00f45c84a9f8cea98113}{inference.\+model\+\_\+path}} = os.\+path.\+join(checkpoint\+\_\+dir, args.\+restore\+\_\+file)
+\item 
+list \mbox{\hyperlink{namespaceinference_acfef38db1dbb2046d798a818c9750b8e}{inference.\+condition}} = \mbox{[}float(i) for i in args.\+condition.\+split(\textquotesingle{}-\/\textquotesingle{})\mbox{]}
+\end{DoxyCompactItemize}

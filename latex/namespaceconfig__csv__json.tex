@@ -1,0 +1,59 @@
+\hypertarget{namespaceconfig__csv__json}{}\doxysection{config\+\_\+csv\+\_\+json Namespace Reference}
+\label{namespaceconfig__csv__json}\index{config\_csv\_json@{config\_csv\_json}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+None \mbox{\hyperlink{namespaceconfig__csv__json_a084314ad9a2f64cf9506043cfe60d262}{create\+\_\+json\+\_\+and\+\_\+split}} (list \mbox{\hyperlink{namespaceconfig__csv__json_a8d0056193c5f484e56b64924e79f2cc0}{csv\+\_\+files}}, float \mbox{\hyperlink{namespaceconfig__csv__json_ac736265e123a1902d0a5a08ce4413b74}{train\+\_\+ratio}}, str \mbox{\hyperlink{namespaceconfig__csv__json_ab6b9aac1c1379445ff5a8954eff1be5c}{output\+\_\+dir}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+list \mbox{\hyperlink{namespaceconfig__csv__json_a8d0056193c5f484e56b64924e79f2cc0}{csv\+\_\+files}} = \mbox{[}f\char`\"{}data\+\_\+base/file\+\_\+\{i\}.CSV\char`\"{} for i in range(1, 48)\mbox{]}
+\item 
+\mbox{\hyperlink{namespaceconfig__csv__json_ac736265e123a1902d0a5a08ce4413b74}{train\+\_\+ratio}}
+\item 
+\mbox{\hyperlink{namespaceconfig__csv__json_ab6b9aac1c1379445ff5a8954eff1be5c}{output\+\_\+dir}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespaceconfig__csv__json_a084314ad9a2f64cf9506043cfe60d262}\label{namespaceconfig__csv__json_a084314ad9a2f64cf9506043cfe60d262}} 
+\index{config\_csv\_json@{config\_csv\_json}!create\_json\_and\_split@{create\_json\_and\_split}}
+\index{create\_json\_and\_split@{create\_json\_and\_split}!config\_csv\_json@{config\_csv\_json}}
+\doxysubsubsection{\texorpdfstring{create\_json\_and\_split()}{create\_json\_and\_split()}}
+{\footnotesize\ttfamily  None config\+\_\+csv\+\_\+json.\+create\+\_\+json\+\_\+and\+\_\+split (\begin{DoxyParamCaption}\item[{list}]{csv\+\_\+files,  }\item[{float}]{train\+\_\+ratio,  }\item[{str}]{output\+\_\+dir }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Create JSON file and split CSV files into training and validation sets.
+
+This function takes a list of CSV files, splits them into training and validation
+sets based on the provided train/validation ratio, and saves them into separate
+directories. It also generates a JSON file that contains metadata about each file,
+including the filename, its split (train/valid), and a parsed condition extracted
+from the 10th column of the CSV.
+
+Args:
+    csv_files (list): List of paths to CSV files to be split.
+    train_ratio (float): The ratio of the dataset to be used for training.
+    output_dir (str): The output directory where the train/valid datasets and JSON file will be saved.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespaceconfig__csv__json_a8d0056193c5f484e56b64924e79f2cc0}\label{namespaceconfig__csv__json_a8d0056193c5f484e56b64924e79f2cc0}} 
+\index{config\_csv\_json@{config\_csv\_json}!csv\_files@{csv\_files}}
+\index{csv\_files@{csv\_files}!config\_csv\_json@{config\_csv\_json}}
+\doxysubsubsection{\texorpdfstring{csv\_files}{csv\_files}}
+{\footnotesize\ttfamily config\+\_\+csv\+\_\+json.\+csv\+\_\+files = \mbox{[}f\char`\"{}data\+\_\+base/file\+\_\+\{i\}.CSV\char`\"{} for i in range(1, 48)\mbox{]}}
+
+\mbox{\Hypertarget{namespaceconfig__csv__json_ab6b9aac1c1379445ff5a8954eff1be5c}\label{namespaceconfig__csv__json_ab6b9aac1c1379445ff5a8954eff1be5c}} 
+\index{config\_csv\_json@{config\_csv\_json}!output\_dir@{output\_dir}}
+\index{output\_dir@{output\_dir}!config\_csv\_json@{config\_csv\_json}}
+\doxysubsubsection{\texorpdfstring{output\_dir}{output\_dir}}
+{\footnotesize\ttfamily config\+\_\+csv\+\_\+json.\+output\+\_\+dir}
+
+\mbox{\Hypertarget{namespaceconfig__csv__json_ac736265e123a1902d0a5a08ce4413b74}\label{namespaceconfig__csv__json_ac736265e123a1902d0a5a08ce4413b74}} 
+\index{config\_csv\_json@{config\_csv\_json}!train\_ratio@{train\_ratio}}
+\index{train\_ratio@{train\_ratio}!config\_csv\_json@{config\_csv\_json}}
+\doxysubsubsection{\texorpdfstring{train\_ratio}{train\_ratio}}
+{\footnotesize\ttfamily config\+\_\+csv\+\_\+json.\+train\+\_\+ratio}
+

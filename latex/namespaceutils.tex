@@ -1,0 +1,341 @@
+\hypertarget{namespaceutils}{}\doxysection{utils Namespace Reference}
+\label{namespaceutils}\index{utils@{utils}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classutils_1_1Params}{Params}}
+\item 
+class \mbox{\hyperlink{classutils_1_1RunningAverage}{Running\+Average}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespaceutils_ab68317532592cc6d06d9f9a7c9e064c8}{load\+\_\+scaler}} (str scaler\+\_\+path)
+\item 
+None \mbox{\hyperlink{namespaceutils_acf82fd4a06cb436e63625596c45c363d}{set\+\_\+logger}} (str log\+\_\+path)
+\item 
+None \mbox{\hyperlink{namespaceutils_a5b267009b569abdba2b308de44bc6e27}{save\+\_\+dict\+\_\+to\+\_\+json}} (dict d, str json\+\_\+path)
+\item 
+None \mbox{\hyperlink{namespaceutils_a989502055237c6b0485105890c14793d}{save\+\_\+checkpoint}} (dict state, bool is\+\_\+best, str checkpoint\+\_\+dir, Optional\mbox{[}str\mbox{]} model=None)
+\item 
+def \mbox{\hyperlink{namespaceutils_a3eccd2a928087ca377ed66be8cac2de4}{load\+\_\+checkpoint}} (str checkpoint, torch.\+nn.\+Module model, Optional\mbox{[}torch.\+optim.\+Optimizer\mbox{]} optimizer=None)
+\item 
+float \mbox{\hyperlink{namespaceutils_ab9371192f88a6ffdb9b86a328cd16013}{compute\+\_\+mse}} (torch.\+Tensor y\+\_\+true, torch.\+Tensor y\+\_\+pred)
+\item 
+float \mbox{\hyperlink{namespaceutils_a223e860df4d44461b20cbc62496e2373}{compute\+\_\+pcc}} (torch.\+Tensor y\+\_\+true, torch.\+Tensor y\+\_\+pred)
+\item 
+def \mbox{\hyperlink{namespaceutils_afbb4d0f45c3674513c382d542a74fd7e}{plot\+\_\+metrics}} (epochs, metrics, labels, ylabel, title, filename, test\+\_\+dir)
+\item 
+def \mbox{\hyperlink{namespaceutils_ae9da260057202c348aea1915db4b6e1b}{plot\+\_\+loss\+\_\+curve}} (epochs, g\+\_\+losses, d\+\_\+losses, val\+\_\+g\+\_\+losses, test\+\_\+dir)
+\item 
+def \mbox{\hyperlink{namespaceutils_ac1f46613618535a67c425adf319aab92}{load\+\_\+coordinates}} (str location\+\_\+csv, str coordinate\+\_\+type)
+\item 
+def \mbox{\hyperlink{namespaceutils_a1ab71dab880f2c59968aca3fb5f6f696}{process\+\_\+and\+\_\+plot}} (coords1, coords2, thickness, img\+\_\+name, output\+\_\+folder, coordinate\+\_\+type)
+\item 
+def \mbox{\hyperlink{namespaceutils_a98624fa5c1e3d503b468d0da7d7f4c6f}{plot\+\_\+cartesian}} (x, y, thickness, img\+\_\+name, output\+\_\+folder)
+\item 
+def \mbox{\hyperlink{namespaceutils_a52e8d17efa9658c572e6927921cd7ca0}{plot\+\_\+polar}} (r, theta, thickness, img\+\_\+name, output\+\_\+folder)
+\item 
+def \mbox{\hyperlink{namespaceutils_adc4b6e6bf81b7d94a2e52098996b0da3}{plot\+\_\+3d\+\_\+polar}} (r, theta, thickness, img\+\_\+name, output\+\_\+folder)
+\item 
+def \mbox{\hyperlink{namespaceutils_ad69af77118a536f0364488019429940a}{plot\+\_\+3d\+\_\+cartesian}} (x, y, thickness, img\+\_\+name, output\+\_\+folder)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespaceutils_ab9371192f88a6ffdb9b86a328cd16013}\label{namespaceutils_ab9371192f88a6ffdb9b86a328cd16013}} 
+\index{utils@{utils}!compute\_mse@{compute\_mse}}
+\index{compute\_mse@{compute\_mse}!utils@{utils}}
+\doxysubsubsection{\texorpdfstring{compute\_mse()}{compute\_mse()}}
+{\footnotesize\ttfamily  float utils.\+compute\+\_\+mse (\begin{DoxyParamCaption}\item[{torch.\+Tensor}]{y\+\_\+true,  }\item[{torch.\+Tensor}]{y\+\_\+pred }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Compute Mean Squared Error between true and predicted values.
+
+@param y_true: True values.
+@param y_pred: Predicted values.
+@return: MSE value.
+\end{DoxyVerb}
+ Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespaceutils_ab9371192f88a6ffdb9b86a328cd16013_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespaceutils_a223e860df4d44461b20cbc62496e2373}\label{namespaceutils_a223e860df4d44461b20cbc62496e2373}} 
+\index{utils@{utils}!compute\_pcc@{compute\_pcc}}
+\index{compute\_pcc@{compute\_pcc}!utils@{utils}}
+\doxysubsubsection{\texorpdfstring{compute\_pcc()}{compute\_pcc()}}
+{\footnotesize\ttfamily  float utils.\+compute\+\_\+pcc (\begin{DoxyParamCaption}\item[{torch.\+Tensor}]{y\+\_\+true,  }\item[{torch.\+Tensor}]{y\+\_\+pred }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Compute Pearson Correlation Coefficient between true and predicted values.
+
+@param y_true: True values.
+@param y_pred: Predicted values.
+@return: PCC value.
+\end{DoxyVerb}
+ Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespaceutils_a223e860df4d44461b20cbc62496e2373_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespaceutils_a3eccd2a928087ca377ed66be8cac2de4}\label{namespaceutils_a3eccd2a928087ca377ed66be8cac2de4}} 
+\index{utils@{utils}!load\_checkpoint@{load\_checkpoint}}
+\index{load\_checkpoint@{load\_checkpoint}!utils@{utils}}
+\doxysubsubsection{\texorpdfstring{load\_checkpoint()}{load\_checkpoint()}}
+{\footnotesize\ttfamily def utils.\+load\+\_\+checkpoint (\begin{DoxyParamCaption}\item[{str}]{checkpoint,  }\item[{torch.\+nn.\+Module}]{model,  }\item[{Optional\mbox{[}torch.\+optim.\+Optimizer\mbox{]} }]{optimizer = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Load model parameters (state_dict) from file_path. If optimizer is provided,
+loads state_dict of optimizer assuming it is present in checkpoint.
+
+@param checkpoint: Filename which needs to be loaded.
+@param model: Model for which the parameters are loaded.
+@param optimizer: Resume optimizer from checkpoint.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespaceutils_ac1f46613618535a67c425adf319aab92}\label{namespaceutils_ac1f46613618535a67c425adf319aab92}} 
+\index{utils@{utils}!load\_coordinates@{load\_coordinates}}
+\index{load\_coordinates@{load\_coordinates}!utils@{utils}}
+\doxysubsubsection{\texorpdfstring{load\_coordinates()}{load\_coordinates()}}
+{\footnotesize\ttfamily def utils.\+load\+\_\+coordinates (\begin{DoxyParamCaption}\item[{str}]{location\+\_\+csv,  }\item[{str}]{coordinate\+\_\+type }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Load coordinate data from a CSV file and return relevant coordinate arrays.
+
+@param location_csv: Path to the CSV file containing location data.
+@param coordinate_type: Type of coordinates ('cartesian' or 'polar').
+@return: Arrays containing the x, y, or r, theta coordinates.
+\end{DoxyVerb}
+ Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespaceutils_ac1f46613618535a67c425adf319aab92_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespaceutils_ab68317532592cc6d06d9f9a7c9e064c8}\label{namespaceutils_ab68317532592cc6d06d9f9a7c9e064c8}} 
+\index{utils@{utils}!load\_scaler@{load\_scaler}}
+\index{load\_scaler@{load\_scaler}!utils@{utils}}
+\doxysubsubsection{\texorpdfstring{load\_scaler()}{load\_scaler()}}
+{\footnotesize\ttfamily def utils.\+load\+\_\+scaler (\begin{DoxyParamCaption}\item[{str}]{scaler\+\_\+path }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Load a pre-trained scaler using joblib.
+
+@param scaler_path: Path to the scaler file.
+@return: Loaded scaler.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespaceutils_ad69af77118a536f0364488019429940a}\label{namespaceutils_ad69af77118a536f0364488019429940a}} 
+\index{utils@{utils}!plot\_3d\_cartesian@{plot\_3d\_cartesian}}
+\index{plot\_3d\_cartesian@{plot\_3d\_cartesian}!utils@{utils}}
+\doxysubsubsection{\texorpdfstring{plot\_3d\_cartesian()}{plot\_3d\_cartesian()}}
+{\footnotesize\ttfamily def utils.\+plot\+\_\+3d\+\_\+cartesian (\begin{DoxyParamCaption}\item[{}]{x,  }\item[{}]{y,  }\item[{}]{thickness,  }\item[{}]{img\+\_\+name,  }\item[{}]{output\+\_\+folder }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Plot and save a 3D surface plot in Cartesian coordinates, handling NaN values in interpolation.
+
+@param x: x coordinates.
+@param y: y coordinates.
+@param thickness: Thickness values.
+@param img_name: Name of the saved image (e.g., '3d_cartesian.png').
+@param output_folder: Folder to save the image.
+@return: Path to the saved image.
+\end{DoxyVerb}
+ Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespaceutils_ad69af77118a536f0364488019429940a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespaceutils_adc4b6e6bf81b7d94a2e52098996b0da3}\label{namespaceutils_adc4b6e6bf81b7d94a2e52098996b0da3}} 
+\index{utils@{utils}!plot\_3d\_polar@{plot\_3d\_polar}}
+\index{plot\_3d\_polar@{plot\_3d\_polar}!utils@{utils}}
+\doxysubsubsection{\texorpdfstring{plot\_3d\_polar()}{plot\_3d\_polar()}}
+{\footnotesize\ttfamily def utils.\+plot\+\_\+3d\+\_\+polar (\begin{DoxyParamCaption}\item[{}]{r,  }\item[{}]{theta,  }\item[{}]{thickness,  }\item[{}]{img\+\_\+name,  }\item[{}]{output\+\_\+folder }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Directly compute and plot a 3D surface in polar coordinates, handling periodicity (0 degrees = 360 degrees).
+
+@param r: Radial coordinates.
+@param theta: Angular coordinates (in radians).
+@param thickness: Thickness values.
+@param img_name: Name of the saved image (e.g., '3d_polar.png').
+@param output_folder: Folder to save the image.
+@return: Path to the saved image.
+\end{DoxyVerb}
+ Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespaceutils_adc4b6e6bf81b7d94a2e52098996b0da3_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespaceutils_a98624fa5c1e3d503b468d0da7d7f4c6f}\label{namespaceutils_a98624fa5c1e3d503b468d0da7d7f4c6f}} 
+\index{utils@{utils}!plot\_cartesian@{plot\_cartesian}}
+\index{plot\_cartesian@{plot\_cartesian}!utils@{utils}}
+\doxysubsubsection{\texorpdfstring{plot\_cartesian()}{plot\_cartesian()}}
+{\footnotesize\ttfamily def utils.\+plot\+\_\+cartesian (\begin{DoxyParamCaption}\item[{}]{x,  }\item[{}]{y,  }\item[{}]{thickness,  }\item[{}]{img\+\_\+name,  }\item[{}]{output\+\_\+folder }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Plot and save a Cartesian coordinate heatmap with conditional extrapolation.
+
+@param x: x coordinates.
+@param y: y coordinates.
+@param thickness: Thickness values.
+@param img_name: Name of the saved image.
+@param output_folder: Folder to save the image.
+@return: Path to the saved image.
+\end{DoxyVerb}
+ Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespaceutils_a98624fa5c1e3d503b468d0da7d7f4c6f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespaceutils_ae9da260057202c348aea1915db4b6e1b}\label{namespaceutils_ae9da260057202c348aea1915db4b6e1b}} 
+\index{utils@{utils}!plot\_loss\_curve@{plot\_loss\_curve}}
+\index{plot\_loss\_curve@{plot\_loss\_curve}!utils@{utils}}
+\doxysubsubsection{\texorpdfstring{plot\_loss\_curve()}{plot\_loss\_curve()}}
+{\footnotesize\ttfamily def utils.\+plot\+\_\+loss\+\_\+curve (\begin{DoxyParamCaption}\item[{}]{epochs,  }\item[{}]{g\+\_\+losses,  }\item[{}]{d\+\_\+losses,  }\item[{}]{val\+\_\+g\+\_\+losses,  }\item[{}]{test\+\_\+dir }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Plot loss curves and save to the specified directory.
+
+@param epochs: List of epoch numbers.
+@param g_losses: Generator loss values.
+@param d_losses: Discriminator loss values.
+@param val_g_losses: Validation generator loss values.
+@param test_dir: Directory to save the plot.
+\end{DoxyVerb}
+ Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespaceutils_ae9da260057202c348aea1915db4b6e1b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespaceutils_afbb4d0f45c3674513c382d542a74fd7e}\label{namespaceutils_afbb4d0f45c3674513c382d542a74fd7e}} 
+\index{utils@{utils}!plot\_metrics@{plot\_metrics}}
+\index{plot\_metrics@{plot\_metrics}!utils@{utils}}
+\doxysubsubsection{\texorpdfstring{plot\_metrics()}{plot\_metrics()}}
+{\footnotesize\ttfamily def utils.\+plot\+\_\+metrics (\begin{DoxyParamCaption}\item[{}]{epochs,  }\item[{}]{metrics,  }\item[{}]{labels,  }\item[{}]{ylabel,  }\item[{}]{title,  }\item[{}]{filename,  }\item[{}]{test\+\_\+dir }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Plot and save metrics curves.
+
+@param epochs: List of epoch numbers.
+@param metrics: List containing metric values for each curve.
+@param labels: List of labels for the curves.
+@param ylabel: Label for the y-axis.
+@param title: Title of the plot.
+@param filename: Filename to save the plot.
+@param test_dir: Directory to save the plot.
+\end{DoxyVerb}
+ Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespaceutils_afbb4d0f45c3674513c382d542a74fd7e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespaceutils_a52e8d17efa9658c572e6927921cd7ca0}\label{namespaceutils_a52e8d17efa9658c572e6927921cd7ca0}} 
+\index{utils@{utils}!plot\_polar@{plot\_polar}}
+\index{plot\_polar@{plot\_polar}!utils@{utils}}
+\doxysubsubsection{\texorpdfstring{plot\_polar()}{plot\_polar()}}
+{\footnotesize\ttfamily def utils.\+plot\+\_\+polar (\begin{DoxyParamCaption}\item[{}]{r,  }\item[{}]{theta,  }\item[{}]{thickness,  }\item[{}]{img\+\_\+name,  }\item[{}]{output\+\_\+folder }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Plot and save a polar coordinate heatmap, ensuring continuity at 360 degrees.
+
+@param r: Radial coordinates.
+@param theta: Angular coordinates in radians.
+@param thickness: Thickness values.
+@param img_name: Name of the saved image.
+@param output_folder: Folder to save the image.
+@return: Path to the saved image.
+\end{DoxyVerb}
+ Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespaceutils_a52e8d17efa9658c572e6927921cd7ca0_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespaceutils_a1ab71dab880f2c59968aca3fb5f6f696}\label{namespaceutils_a1ab71dab880f2c59968aca3fb5f6f696}} 
+\index{utils@{utils}!process\_and\_plot@{process\_and\_plot}}
+\index{process\_and\_plot@{process\_and\_plot}!utils@{utils}}
+\doxysubsubsection{\texorpdfstring{process\_and\_plot()}{process\_and\_plot()}}
+{\footnotesize\ttfamily def utils.\+process\+\_\+and\+\_\+plot (\begin{DoxyParamCaption}\item[{}]{coords1,  }\item[{}]{coords2,  }\item[{}]{thickness,  }\item[{}]{img\+\_\+name,  }\item[{}]{output\+\_\+folder,  }\item[{}]{coordinate\+\_\+type }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Process thickness data, plot both 2D and 3D plots based on the selected coordinate system, and display them side by side.
+
+@param coords1: x or r coordinates.
+@param coords2: y or theta coordinates.
+@param thickness: Thickness values.
+@param img_name: Base name of the saved images (without extension).
+@param output_folder: Folder to save the images.
+@param coordinate_type: Coordinate system type ('cartesian' or 'polar').
+\end{DoxyVerb}
+ Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespaceutils_a1ab71dab880f2c59968aca3fb5f6f696_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespaceutils_a1ab71dab880f2c59968aca3fb5f6f696_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespaceutils_a989502055237c6b0485105890c14793d}\label{namespaceutils_a989502055237c6b0485105890c14793d}} 
+\index{utils@{utils}!save\_checkpoint@{save\_checkpoint}}
+\index{save\_checkpoint@{save\_checkpoint}!utils@{utils}}
+\doxysubsubsection{\texorpdfstring{save\_checkpoint()}{save\_checkpoint()}}
+{\footnotesize\ttfamily  None utils.\+save\+\_\+checkpoint (\begin{DoxyParamCaption}\item[{dict}]{state,  }\item[{bool}]{is\+\_\+best,  }\item[{str}]{checkpoint\+\_\+dir,  }\item[{Optional\mbox{[}str\mbox{]} }]{model = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Save the model and training parameters.
+
+@param state: Model's state dictionary.
+@param is_best: True if it is the best model seen till now.
+@param checkpoint_dir: Directory to save the checkpoint.
+@param model: 'gen' or 'disc' indicating the model type.
+\end{DoxyVerb}
+ Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespaceutils_a989502055237c6b0485105890c14793d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespaceutils_a5b267009b569abdba2b308de44bc6e27}\label{namespaceutils_a5b267009b569abdba2b308de44bc6e27}} 
+\index{utils@{utils}!save\_dict\_to\_json@{save\_dict\_to\_json}}
+\index{save\_dict\_to\_json@{save\_dict\_to\_json}!utils@{utils}}
+\doxysubsubsection{\texorpdfstring{save\_dict\_to\_json()}{save\_dict\_to\_json()}}
+{\footnotesize\ttfamily  None utils.\+save\+\_\+dict\+\_\+to\+\_\+json (\begin{DoxyParamCaption}\item[{dict}]{d,  }\item[{str}]{json\+\_\+path }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Save a dictionary of floats to a JSON file.
+
+@param d: Dictionary to save.
+@param json_path: Path to the JSON file.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespaceutils_acf82fd4a06cb436e63625596c45c363d}\label{namespaceutils_acf82fd4a06cb436e63625596c45c363d}} 
+\index{utils@{utils}!set\_logger@{set\_logger}}
+\index{set\_logger@{set\_logger}!utils@{utils}}
+\doxysubsubsection{\texorpdfstring{set\_logger()}{set\_logger()}}
+{\footnotesize\ttfamily  None utils.\+set\+\_\+logger (\begin{DoxyParamCaption}\item[{str}]{log\+\_\+path }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Set up the logger to log messages to both console and file.
+
+@param log_path: Path to the log file.
+\end{DoxyVerb}
+ 

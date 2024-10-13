@@ -1,0 +1,172 @@
+\hypertarget{namespacegenerate}{}\doxysection{generate Namespace Reference}
+\label{namespacegenerate}\index{generate@{generate}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+None \mbox{\hyperlink{namespacegenerate_af3cd845efd4ac8cb38fc996978db0ea0}{generate\+\_\+images}} (cgan.\+Generator \mbox{\hyperlink{namespacegenerate_aee97a3ee314a88b959a4f22cf1a26aa4}{model}}, \mbox{\hyperlink{classutils_1_1Params}{utils.\+Params}} \mbox{\hyperlink{namespacegenerate_a6dc882368eff41437d5e89d8728804f8}{params}}, Data\+Loader dataloader, str \mbox{\hyperlink{namespacegenerate_ac7f73ed7ac0c976b04008d5b43fa3ca1}{output\+\_\+folder}}, str location\+\_\+csv, \mbox{\hyperlink{namespacegenerate_a2db0c73d7557926bac170716626077df}{scaler\+\_\+condition}}, \mbox{\hyperlink{namespacegenerate_a752768af1a66d3d45791a3ac99a5bb8a}{scaler\+\_\+output}}, str coordinate\+\_\+type)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacegenerate_a17a1c434a40b228f25748ab35b718f04}{parser}} = argparse.\+Argument\+Parser()
+\item 
+\mbox{\hyperlink{namespacegenerate_aebaa0dc34dc7547700be9a8455325bd4}{default}}
+\item 
+\mbox{\hyperlink{namespacegenerate_a36cbee60b5d815661735944a05134129}{help}}
+\item 
+\mbox{\hyperlink{namespacegenerate_a0c5a3d86032ffead1cfe760264456a23}{args}} = parser.\+parse\+\_\+args()
+\item 
+\mbox{\hyperlink{namespacegenerate_ab11b0167507379b1fc6e19b7503bb2cd}{json\+\_\+path}} = os.\+path.\+join(args.\+test\+\_\+dir, \char`\"{}params.\+json\char`\"{})
+\item 
+\mbox{\hyperlink{namespacegenerate_a6dc882368eff41437d5e89d8728804f8}{params}} = \mbox{\hyperlink{classutils_1_1Params}{utils.\+Params}}(\mbox{\hyperlink{namespacegenerate_ab11b0167507379b1fc6e19b7503bb2cd}{json\+\_\+path}})
+\item 
+\mbox{\hyperlink{namespacegenerate_a23ba1e6e45f2021b9937d60be3dc299a}{cuda}}
+\item 
+\mbox{\hyperlink{namespacegenerate_ac7f73ed7ac0c976b04008d5b43fa3ca1}{output\+\_\+folder}} = os.\+path.\+join(args.\+test\+\_\+dir, \textquotesingle{}generated\+\_\+images\textquotesingle{})
+\item 
+\mbox{\hyperlink{namespacegenerate_a2db0c73d7557926bac170716626077df}{scaler\+\_\+condition}} = joblib.\+load(os.\+path.\+join(args.\+data\+\_\+dir, \textquotesingle{}scaler\+\_\+condition.\+pkl\textquotesingle{}))
+\item 
+\mbox{\hyperlink{namespacegenerate_a752768af1a66d3d45791a3ac99a5bb8a}{scaler\+\_\+output}} = joblib.\+load(os.\+path.\+join(args.\+data\+\_\+dir, \textquotesingle{}scaler\+\_\+output.\+pkl\textquotesingle{}))
+\item 
+\mbox{\hyperlink{namespacegenerate_a24fdde99e647b8ac3885c69bbda507e9}{dataset}} = DD(os.\+path.\+join(args.\+data\+\_\+dir, \textquotesingle{}train.\+json\textquotesingle{}))
+\item 
+\mbox{\hyperlink{namespacegenerate_a7b6f3ac4d1476068f8fe208a953afe63}{dl}}
+\item 
+\mbox{\hyperlink{namespacegenerate_aee97a3ee314a88b959a4f22cf1a26aa4}{model}} = cgan.\+Generator(\mbox{\hyperlink{namespacegenerate_a6dc882368eff41437d5e89d8728804f8}{params}}).\mbox{\hyperlink{namespacegenerate_a23ba1e6e45f2021b9937d60be3dc299a}{cuda}}() if params.\+cuda else cgan.\+Generator(\mbox{\hyperlink{namespacegenerate_a6dc882368eff41437d5e89d8728804f8}{params}})
+\item 
+\mbox{\hyperlink{namespacegenerate_ac5e91b61e65be0b10c1b24e086d07f0d}{checkpoint\+\_\+dir}} = os.\+path.\+join(args.\+test\+\_\+dir, \textquotesingle{}checkpoints\textquotesingle{})
+\item 
+\mbox{\hyperlink{namespacegenerate_ad64a30ab590fea8728e39f93c24af585}{model\+\_\+path}} = os.\+path.\+join(\mbox{\hyperlink{namespacegenerate_ac5e91b61e65be0b10c1b24e086d07f0d}{checkpoint\+\_\+dir}}, args.\+restore\+\_\+file)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacegenerate_af3cd845efd4ac8cb38fc996978db0ea0}\label{namespacegenerate_af3cd845efd4ac8cb38fc996978db0ea0}} 
+\index{generate@{generate}!generate\_images@{generate\_images}}
+\index{generate\_images@{generate\_images}!generate@{generate}}
+\doxysubsubsection{\texorpdfstring{generate\_images()}{generate\_images()}}
+{\footnotesize\ttfamily  None generate.\+generate\+\_\+images (\begin{DoxyParamCaption}\item[{cgan.\+Generator}]{model,  }\item[{\mbox{\hyperlink{classutils_1_1Params}{utils.\+Params}}}]{params,  }\item[{Data\+Loader}]{dataloader,  }\item[{str}]{output\+\_\+folder,  }\item[{str}]{location\+\_\+csv,  }\item[{}]{scaler\+\_\+condition,  }\item[{}]{scaler\+\_\+output,  }\item[{str}]{coordinate\+\_\+type }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Generate images using the trained generator model.
+
+This function uses the generator model to generate multiple images based on
+the input dataset and saves them to the specified output folder.
+
+@param model Trained generator model.
+@param params Model hyperparameters.
+@param dataloader DataLoader for the dataset.
+@param output_folder Folder to save the generated images.
+@param location_csv Path to the CSV file containing coordinates.
+@param scaler_condition Scaler for normalizing condition.
+@param scaler_output Scaler for inverse transforming output.
+@param coordinate_type Coordinate system type ('cartesian' or 'polar').
+
+@return None
+\end{DoxyVerb}
+ Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacegenerate_af3cd845efd4ac8cb38fc996978db0ea0_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespacegenerate_a0c5a3d86032ffead1cfe760264456a23}\label{namespacegenerate_a0c5a3d86032ffead1cfe760264456a23}} 
+\index{generate@{generate}!args@{args}}
+\index{args@{args}!generate@{generate}}
+\doxysubsubsection{\texorpdfstring{args}{args}}
+{\footnotesize\ttfamily generate.\+args = parser.\+parse\+\_\+args()}
+
+\mbox{\Hypertarget{namespacegenerate_ac5e91b61e65be0b10c1b24e086d07f0d}\label{namespacegenerate_ac5e91b61e65be0b10c1b24e086d07f0d}} 
+\index{generate@{generate}!checkpoint\_dir@{checkpoint\_dir}}
+\index{checkpoint\_dir@{checkpoint\_dir}!generate@{generate}}
+\doxysubsubsection{\texorpdfstring{checkpoint\_dir}{checkpoint\_dir}}
+{\footnotesize\ttfamily generate.\+checkpoint\+\_\+dir = os.\+path.\+join(args.\+test\+\_\+dir, \textquotesingle{}checkpoints\textquotesingle{})}
+
+\mbox{\Hypertarget{namespacegenerate_a23ba1e6e45f2021b9937d60be3dc299a}\label{namespacegenerate_a23ba1e6e45f2021b9937d60be3dc299a}} 
+\index{generate@{generate}!cuda@{cuda}}
+\index{cuda@{cuda}!generate@{generate}}
+\doxysubsubsection{\texorpdfstring{cuda}{cuda}}
+{\footnotesize\ttfamily generate.\+cuda}
+
+\mbox{\Hypertarget{namespacegenerate_a24fdde99e647b8ac3885c69bbda507e9}\label{namespacegenerate_a24fdde99e647b8ac3885c69bbda507e9}} 
+\index{generate@{generate}!dataset@{dataset}}
+\index{dataset@{dataset}!generate@{generate}}
+\doxysubsubsection{\texorpdfstring{dataset}{dataset}}
+{\footnotesize\ttfamily generate.\+dataset = DD(os.\+path.\+join(args.\+data\+\_\+dir, \textquotesingle{}train.\+json\textquotesingle{}))}
+
+\mbox{\Hypertarget{namespacegenerate_aebaa0dc34dc7547700be9a8455325bd4}\label{namespacegenerate_aebaa0dc34dc7547700be9a8455325bd4}} 
+\index{generate@{generate}!default@{default}}
+\index{default@{default}!generate@{generate}}
+\doxysubsubsection{\texorpdfstring{default}{default}}
+{\footnotesize\ttfamily generate.\+default}
+
+\mbox{\Hypertarget{namespacegenerate_a7b6f3ac4d1476068f8fe208a953afe63}\label{namespacegenerate_a7b6f3ac4d1476068f8fe208a953afe63}} 
+\index{generate@{generate}!dl@{dl}}
+\index{dl@{dl}!generate@{generate}}
+\doxysubsubsection{\texorpdfstring{dl}{dl}}
+{\footnotesize\ttfamily generate.\+dl}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 =  DataLoader(dataset, batch\_size=1, shuffle=\textcolor{keyword}{True},}
+\DoxyCodeLine{2                     num\_workers=params.num\_workers, pin\_memory=params.cuda)}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacegenerate_a36cbee60b5d815661735944a05134129}\label{namespacegenerate_a36cbee60b5d815661735944a05134129}} 
+\index{generate@{generate}!help@{help}}
+\index{help@{help}!generate@{generate}}
+\doxysubsubsection{\texorpdfstring{help}{help}}
+{\footnotesize\ttfamily generate.\+help}
+
+\mbox{\Hypertarget{namespacegenerate_ab11b0167507379b1fc6e19b7503bb2cd}\label{namespacegenerate_ab11b0167507379b1fc6e19b7503bb2cd}} 
+\index{generate@{generate}!json\_path@{json\_path}}
+\index{json\_path@{json\_path}!generate@{generate}}
+\doxysubsubsection{\texorpdfstring{json\_path}{json\_path}}
+{\footnotesize\ttfamily generate.\+json\+\_\+path = os.\+path.\+join(args.\+test\+\_\+dir, \char`\"{}params.\+json\char`\"{})}
+
+\mbox{\Hypertarget{namespacegenerate_aee97a3ee314a88b959a4f22cf1a26aa4}\label{namespacegenerate_aee97a3ee314a88b959a4f22cf1a26aa4}} 
+\index{generate@{generate}!model@{model}}
+\index{model@{model}!generate@{generate}}
+\doxysubsubsection{\texorpdfstring{model}{model}}
+{\footnotesize\ttfamily generate.\+model = cgan.\+Generator(\mbox{\hyperlink{namespacegenerate_a6dc882368eff41437d5e89d8728804f8}{params}}).\mbox{\hyperlink{namespacegenerate_a23ba1e6e45f2021b9937d60be3dc299a}{cuda}}() if params.\+cuda else cgan.\+Generator(\mbox{\hyperlink{namespacegenerate_a6dc882368eff41437d5e89d8728804f8}{params}})}
+
+\mbox{\Hypertarget{namespacegenerate_ad64a30ab590fea8728e39f93c24af585}\label{namespacegenerate_ad64a30ab590fea8728e39f93c24af585}} 
+\index{generate@{generate}!model\_path@{model\_path}}
+\index{model\_path@{model\_path}!generate@{generate}}
+\doxysubsubsection{\texorpdfstring{model\_path}{model\_path}}
+{\footnotesize\ttfamily generate.\+model\+\_\+path = os.\+path.\+join(\mbox{\hyperlink{namespacegenerate_ac5e91b61e65be0b10c1b24e086d07f0d}{checkpoint\+\_\+dir}}, args.\+restore\+\_\+file)}
+
+\mbox{\Hypertarget{namespacegenerate_ac7f73ed7ac0c976b04008d5b43fa3ca1}\label{namespacegenerate_ac7f73ed7ac0c976b04008d5b43fa3ca1}} 
+\index{generate@{generate}!output\_folder@{output\_folder}}
+\index{output\_folder@{output\_folder}!generate@{generate}}
+\doxysubsubsection{\texorpdfstring{output\_folder}{output\_folder}}
+{\footnotesize\ttfamily generate.\+output\+\_\+folder = os.\+path.\+join(args.\+test\+\_\+dir, \textquotesingle{}generated\+\_\+images\textquotesingle{})}
+
+\mbox{\Hypertarget{namespacegenerate_a6dc882368eff41437d5e89d8728804f8}\label{namespacegenerate_a6dc882368eff41437d5e89d8728804f8}} 
+\index{generate@{generate}!params@{params}}
+\index{params@{params}!generate@{generate}}
+\doxysubsubsection{\texorpdfstring{params}{params}}
+{\footnotesize\ttfamily generate.\+params = \mbox{\hyperlink{classutils_1_1Params}{utils.\+Params}}(\mbox{\hyperlink{namespacegenerate_ab11b0167507379b1fc6e19b7503bb2cd}{json\+\_\+path}})}
+
+\mbox{\Hypertarget{namespacegenerate_a17a1c434a40b228f25748ab35b718f04}\label{namespacegenerate_a17a1c434a40b228f25748ab35b718f04}} 
+\index{generate@{generate}!parser@{parser}}
+\index{parser@{parser}!generate@{generate}}
+\doxysubsubsection{\texorpdfstring{parser}{parser}}
+{\footnotesize\ttfamily generate.\+parser = argparse.\+Argument\+Parser()}
+
+\mbox{\Hypertarget{namespacegenerate_a2db0c73d7557926bac170716626077df}\label{namespacegenerate_a2db0c73d7557926bac170716626077df}} 
+\index{generate@{generate}!scaler\_condition@{scaler\_condition}}
+\index{scaler\_condition@{scaler\_condition}!generate@{generate}}
+\doxysubsubsection{\texorpdfstring{scaler\_condition}{scaler\_condition}}
+{\footnotesize\ttfamily generate.\+scaler\+\_\+condition = joblib.\+load(os.\+path.\+join(args.\+data\+\_\+dir, \textquotesingle{}scaler\+\_\+condition.\+pkl\textquotesingle{}))}
+
+\mbox{\Hypertarget{namespacegenerate_a752768af1a66d3d45791a3ac99a5bb8a}\label{namespacegenerate_a752768af1a66d3d45791a3ac99a5bb8a}} 
+\index{generate@{generate}!scaler\_output@{scaler\_output}}
+\index{scaler\_output@{scaler\_output}!generate@{generate}}
+\doxysubsubsection{\texorpdfstring{scaler\_output}{scaler\_output}}
+{\footnotesize\ttfamily generate.\+scaler\+\_\+output = joblib.\+load(os.\+path.\+join(args.\+data\+\_\+dir, \textquotesingle{}scaler\+\_\+output.\+pkl\textquotesingle{}))}
+

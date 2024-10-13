@@ -1,0 +1,121 @@
+\hypertarget{classcWGAN_1_1Generator}{}\doxysection{c\+WGAN.\+Generator Class Reference}
+\label{classcWGAN_1_1Generator}\index{cWGAN.Generator@{cWGAN.Generator}}
+
+
+Inheritance diagram for c\+WGAN.\+Generator\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=185pt]{classcWGAN_1_1Generator__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for c\+WGAN.\+Generator\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=185pt]{classcWGAN_1_1Generator__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+None \mbox{\hyperlink{classcWGAN_1_1Generator_ab71dc6adf20e687bb86d89ad5ae14232}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, \mbox{\hyperlink{classutils_1_1Params}{Params}} params)
+\item 
+torch.\+Tensor \mbox{\hyperlink{classcWGAN_1_1Generator_a5f3ace1032fee81835c31939a7fc8771}{forward}} (self, torch.\+Tensor z, torch.\+Tensor y)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcWGAN_1_1Generator_a4d178c196c3052a2870c2e313fdf6a1f}{act\+\_\+func}}
+\item 
+\mbox{\hyperlink{classcWGAN_1_1Generator_a01806a886a560f150baa9676a8527cca}{func\+\_\+params}}
+\item 
+\mbox{\hyperlink{classcWGAN_1_1Generator_a53aaca34aeab176923ed84e190c22180}{noise}}
+\item 
+\mbox{\hyperlink{classcWGAN_1_1Generator_a959b65a39acb0599232133c054c2d2c5}{cond}}
+\item 
+\mbox{\hyperlink{classcWGAN_1_1Generator_ad2ba2696bae76fa0802e2a9a6aa5d08c}{out}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Generator model for conditional WGAN-GP.
+
+This model takes in noise (z) and a conditional input (y), and generates
+synthetic data that mimics the real data distribution.
+
+@param params Model hyperparameters including activation function,
+              input dimensions, number of nodes, and output dimensions.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classcWGAN_1_1Generator_ab71dc6adf20e687bb86d89ad5ae14232}\label{classcWGAN_1_1Generator_ab71dc6adf20e687bb86d89ad5ae14232}} 
+\index{cWGAN.Generator@{cWGAN.Generator}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!cWGAN.Generator@{cWGAN.Generator}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily  None c\+WGAN.\+Generator.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{\mbox{\hyperlink{classutils_1_1Params}{Params}}}]{params }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Constructor for the Generator class.
+
+@param params Hyperparameters for the Generator including activation function,
+              input dimensions, and number of nodes.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classcWGAN_1_1Generator_a5f3ace1032fee81835c31939a7fc8771}\label{classcWGAN_1_1Generator_a5f3ace1032fee81835c31939a7fc8771}} 
+\index{cWGAN.Generator@{cWGAN.Generator}!forward@{forward}}
+\index{forward@{forward}!cWGAN.Generator@{cWGAN.Generator}}
+\doxysubsubsection{\texorpdfstring{forward()}{forward()}}
+{\footnotesize\ttfamily  torch.\+Tensor c\+WGAN.\+Generator.\+forward (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{torch.\+Tensor}]{z,  }\item[{torch.\+Tensor}]{y }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Forward pass of the Generator.
+
+Combines noise (z) and conditional input (y) to generate synthetic data.
+
+@param z Noise vector.
+@param y Conditional input vector.
+
+@return Generated data as a torch.Tensor.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classcWGAN_1_1Generator_a4d178c196c3052a2870c2e313fdf6a1f}\label{classcWGAN_1_1Generator_a4d178c196c3052a2870c2e313fdf6a1f}} 
+\index{cWGAN.Generator@{cWGAN.Generator}!act\_func@{act\_func}}
+\index{act\_func@{act\_func}!cWGAN.Generator@{cWGAN.Generator}}
+\doxysubsubsection{\texorpdfstring{act\_func}{act\_func}}
+{\footnotesize\ttfamily c\+WGAN.\+Generator.\+act\+\_\+func}
+
+\mbox{\Hypertarget{classcWGAN_1_1Generator_a959b65a39acb0599232133c054c2d2c5}\label{classcWGAN_1_1Generator_a959b65a39acb0599232133c054c2d2c5}} 
+\index{cWGAN.Generator@{cWGAN.Generator}!cond@{cond}}
+\index{cond@{cond}!cWGAN.Generator@{cWGAN.Generator}}
+\doxysubsubsection{\texorpdfstring{cond}{cond}}
+{\footnotesize\ttfamily c\+WGAN.\+Generator.\+cond}
+
+\mbox{\Hypertarget{classcWGAN_1_1Generator_a01806a886a560f150baa9676a8527cca}\label{classcWGAN_1_1Generator_a01806a886a560f150baa9676a8527cca}} 
+\index{cWGAN.Generator@{cWGAN.Generator}!func\_params@{func\_params}}
+\index{func\_params@{func\_params}!cWGAN.Generator@{cWGAN.Generator}}
+\doxysubsubsection{\texorpdfstring{func\_params}{func\_params}}
+{\footnotesize\ttfamily c\+WGAN.\+Generator.\+func\+\_\+params}
+
+\mbox{\Hypertarget{classcWGAN_1_1Generator_a53aaca34aeab176923ed84e190c22180}\label{classcWGAN_1_1Generator_a53aaca34aeab176923ed84e190c22180}} 
+\index{cWGAN.Generator@{cWGAN.Generator}!noise@{noise}}
+\index{noise@{noise}!cWGAN.Generator@{cWGAN.Generator}}
+\doxysubsubsection{\texorpdfstring{noise}{noise}}
+{\footnotesize\ttfamily c\+WGAN.\+Generator.\+noise}
+
+\mbox{\Hypertarget{classcWGAN_1_1Generator_ad2ba2696bae76fa0802e2a9a6aa5d08c}\label{classcWGAN_1_1Generator_ad2ba2696bae76fa0802e2a9a6aa5d08c}} 
+\index{cWGAN.Generator@{cWGAN.Generator}!out@{out}}
+\index{out@{out}!cWGAN.Generator@{cWGAN.Generator}}
+\doxysubsubsection{\texorpdfstring{out}{out}}
+{\footnotesize\ttfamily c\+WGAN.\+Generator.\+out}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+model/\mbox{\hyperlink{cWGAN_8py}{c\+WGAN.\+py}}\end{DoxyCompactItemize}

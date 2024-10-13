@@ -2656,10 +2656,13 @@ GENERATE_LEGEND        = YES
 # The default value is: YES.
 
 DOT_CLEANUP            = YES
-INPUT = ..
-FILE_PATTERNS = *.py
-RECURSIVE = YES
-EXTRACT_ALL = YES
-EXTRACT_PRIVATE = YES
-EXTRACT_STATIC = YES
+PROJECT_NAME           = "plot_deposition"
+FILE_PATTERNS          = *.py *.json *.sh
+EXTENSION_MAPPING      = json=C sh=C
+RECURSIVE              = YES
+EXTRACT_ALL            = YES
+GENERATE_HTML          = YES
+EXTRACT_FUNCTIONS  = YES
+CALL_GRAPH         = YES
+CALLER_GRAPH       = YES
 

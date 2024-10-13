@@ -1,0 +1,58 @@
+\hypertarget{namespacepreprocess}{}\doxysection{preprocess Namespace Reference}
+\label{namespacepreprocess}\index{preprocess@{preprocess}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacepreprocess_a56f328ceea3a19d275bedeb789aeced3}{preprocess\+\_\+data}} (str \mbox{\hyperlink{namespacepreprocess_aeab64d5aca849da42752b867289686da}{metadata\+\_\+file}}, str \mbox{\hyperlink{namespacepreprocess_a6036ce5d240e21785fdfaff2196ac23b}{data\+\_\+dir}}, \mbox{\hyperlink{classutils_1_1Params}{Params}} \mbox{\hyperlink{namespacepreprocess_a4f126f0e3d0687b756ac4c1770bda46f}{params}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacepreprocess_a4f126f0e3d0687b756ac4c1770bda46f}{params}} = \mbox{\hyperlink{classutils_1_1Params}{Params}}(\char`\"{}tests/truecond\+W1/params.\+json\char`\"{})
+\item 
+string \mbox{\hyperlink{namespacepreprocess_aeab64d5aca849da42752b867289686da}{metadata\+\_\+file}} = \char`\"{}data\+\_\+raw/data/split\+\_\+data/file\+\_\+metadata.\+json\char`\"{}
+\item 
+string \mbox{\hyperlink{namespacepreprocess_a6036ce5d240e21785fdfaff2196ac23b}{data\+\_\+dir}} = \char`\"{}data\+\_\+raw/data/split\+\_\+data\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacepreprocess_a56f328ceea3a19d275bedeb789aeced3}\label{namespacepreprocess_a56f328ceea3a19d275bedeb789aeced3}} 
+\index{preprocess@{preprocess}!preprocess\_data@{preprocess\_data}}
+\index{preprocess\_data@{preprocess\_data}!preprocess@{preprocess}}
+\doxysubsubsection{\texorpdfstring{preprocess\_data()}{preprocess\_data()}}
+{\footnotesize\ttfamily def preprocess.\+preprocess\+\_\+data (\begin{DoxyParamCaption}\item[{str}]{metadata\+\_\+file,  }\item[{str}]{data\+\_\+dir,  }\item[{\mbox{\hyperlink{classutils_1_1Params}{Params}}}]{params }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Preprocess CSV data by normalizing the condition and output vectors, and save to JSON files.
+
+This function loads metadata, reads the corresponding CSV files, and extracts the condition
+and output vectors for both training and validation datasets. It then normalizes the data
+using StandardScaler and saves the preprocessed data and the scalers to disk.
+
+@param metadata_file Path to the metadata JSON file containing file paths and conditions.
+@param data_dir Directory containing the 'train' and 'valid' folders with CSV data.
+@param params Model parameters that include the output dimension and other settings.
+
+@return None
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespacepreprocess_a6036ce5d240e21785fdfaff2196ac23b}\label{namespacepreprocess_a6036ce5d240e21785fdfaff2196ac23b}} 
+\index{preprocess@{preprocess}!data\_dir@{data\_dir}}
+\index{data\_dir@{data\_dir}!preprocess@{preprocess}}
+\doxysubsubsection{\texorpdfstring{data\_dir}{data\_dir}}
+{\footnotesize\ttfamily string preprocess.\+data\+\_\+dir = \char`\"{}data\+\_\+raw/data/split\+\_\+data\char`\"{}}
+
+\mbox{\Hypertarget{namespacepreprocess_aeab64d5aca849da42752b867289686da}\label{namespacepreprocess_aeab64d5aca849da42752b867289686da}} 
+\index{preprocess@{preprocess}!metadata\_file@{metadata\_file}}
+\index{metadata\_file@{metadata\_file}!preprocess@{preprocess}}
+\doxysubsubsection{\texorpdfstring{metadata\_file}{metadata\_file}}
+{\footnotesize\ttfamily string preprocess.\+metadata\+\_\+file = \char`\"{}data\+\_\+raw/data/split\+\_\+data/file\+\_\+metadata.\+json\char`\"{}}
+
+\mbox{\Hypertarget{namespacepreprocess_a4f126f0e3d0687b756ac4c1770bda46f}\label{namespacepreprocess_a4f126f0e3d0687b756ac4c1770bda46f}} 
+\index{preprocess@{preprocess}!params@{params}}
+\index{params@{params}!preprocess@{preprocess}}
+\doxysubsubsection{\texorpdfstring{params}{params}}
+{\footnotesize\ttfamily preprocess.\+params = \mbox{\hyperlink{classutils_1_1Params}{Params}}(\char`\"{}tests/truecond\+W1/params.\+json\char`\"{})}
+

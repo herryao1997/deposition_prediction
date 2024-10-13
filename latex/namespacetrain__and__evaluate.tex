@@ -1,0 +1,404 @@
+\hypertarget{namespacetrain__and__evaluate}{}\doxysection{train\+\_\+and\+\_\+evaluate Namespace Reference}
+\label{namespacetrain__and__evaluate}\index{train\_and\_evaluate@{train\_and\_evaluate}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacetrain__and__evaluate_a9c18e56ede22f6f2aef4a49bb4757d96}{calc\+\_\+gradient\+\_\+penalty}} (\mbox{\hyperlink{namespacetrain__and__evaluate_a11494f0b34bc57eb91121b979a6baef6}{params}}, \mbox{\hyperlink{namespacetrain__and__evaluate_ae757f89c26c6ef7e0023211a76ca7c3a}{d\+\_\+model}}, real\+\_\+data, fake\+\_\+data, conditions)
+\item 
+def \mbox{\hyperlink{namespacetrain__and__evaluate_a7b16609a7ecc37c900206383458bd994}{disc\+\_\+train\+\_\+step}} (\mbox{\hyperlink{namespacetrain__and__evaluate_a11494f0b34bc57eb91121b979a6baef6}{params}}, \mbox{\hyperlink{namespacetrain__and__evaluate_ae757f89c26c6ef7e0023211a76ca7c3a}{d\+\_\+model}}, \mbox{\hyperlink{namespacetrain__and__evaluate_a232e63cbfa67fd4a38c5ff47a7d3eea5}{g\+\_\+model}}, \mbox{\hyperlink{namespacetrain__and__evaluate_a8ffa6fcf14c1b38b86199f773dd147ef}{d\+\_\+optimizer}}, real\+\_\+data, conditions)
+\item 
+def \mbox{\hyperlink{namespacetrain__and__evaluate_a6320672da4072fad4f3fc611419728d1}{gen\+\_\+train\+\_\+step}} (\mbox{\hyperlink{namespacetrain__and__evaluate_a11494f0b34bc57eb91121b979a6baef6}{params}}, \mbox{\hyperlink{namespacetrain__and__evaluate_ae757f89c26c6ef7e0023211a76ca7c3a}{d\+\_\+model}}, \mbox{\hyperlink{namespacetrain__and__evaluate_a232e63cbfa67fd4a38c5ff47a7d3eea5}{g\+\_\+model}}, \mbox{\hyperlink{namespacetrain__and__evaluate_ace7e2f113ad67b7e5386c2f18a74d11a}{g\+\_\+optimizer}}, conditions)
+\item 
+def \mbox{\hyperlink{namespacetrain__and__evaluate_a2611a914d78140e9ca6a090e916c4fb9}{print\+\_\+model\+\_\+info}} (\mbox{\hyperlink{namespacetrain__and__evaluate_a232e63cbfa67fd4a38c5ff47a7d3eea5}{g\+\_\+model}}, \mbox{\hyperlink{namespacetrain__and__evaluate_ae757f89c26c6ef7e0023211a76ca7c3a}{d\+\_\+model}}, conditions\+\_\+batch, real\+\_\+data\+\_\+batch, z\+\_\+dim)
+\item 
+def \mbox{\hyperlink{namespacetrain__and__evaluate_aa11a58cd6895262a7a9275db00aa9ffa}{train\+\_\+epoch}} (\mbox{\hyperlink{namespacetrain__and__evaluate_a232e63cbfa67fd4a38c5ff47a7d3eea5}{g\+\_\+model}}, \mbox{\hyperlink{namespacetrain__and__evaluate_ae757f89c26c6ef7e0023211a76ca7c3a}{d\+\_\+model}}, \mbox{\hyperlink{namespacetrain__and__evaluate_ace7e2f113ad67b7e5386c2f18a74d11a}{g\+\_\+optimizer}}, \mbox{\hyperlink{namespacetrain__and__evaluate_a8ffa6fcf14c1b38b86199f773dd147ef}{d\+\_\+optimizer}}, dataloader, \mbox{\hyperlink{namespacetrain__and__evaluate_a11494f0b34bc57eb91121b979a6baef6}{params}})
+\item 
+def \mbox{\hyperlink{namespacetrain__and__evaluate_a67fcf6fce35f6016edb9b940fa072251}{evaluate}} (\mbox{\hyperlink{namespacetrain__and__evaluate_a232e63cbfa67fd4a38c5ff47a7d3eea5}{g\+\_\+model}}, val\+\_\+dataloader, \mbox{\hyperlink{namespacetrain__and__evaluate_a11494f0b34bc57eb91121b979a6baef6}{params}})
+\item 
+def \mbox{\hyperlink{namespacetrain__and__evaluate_a3d3022a7c8db838460709eec57bdd722}{train\+\_\+and\+\_\+evaluate}} (\mbox{\hyperlink{namespacetrain__and__evaluate_a232e63cbfa67fd4a38c5ff47a7d3eea5}{g\+\_\+model}}, \mbox{\hyperlink{namespacetrain__and__evaluate_ae757f89c26c6ef7e0023211a76ca7c3a}{d\+\_\+model}}, train\+\_\+dataloader, val\+\_\+dataloader, \mbox{\hyperlink{namespacetrain__and__evaluate_ace7e2f113ad67b7e5386c2f18a74d11a}{g\+\_\+optimizer}}, \mbox{\hyperlink{namespacetrain__and__evaluate_a8ffa6fcf14c1b38b86199f773dd147ef}{d\+\_\+optimizer}}, \mbox{\hyperlink{namespacetrain__and__evaluate_a11494f0b34bc57eb91121b979a6baef6}{params}}, test\+\_\+dir)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacetrain__and__evaluate_a5834ff30fde934ad8810c77a3b883ff4}{parser}} = argparse.\+Argument\+Parser()
+\item 
+\mbox{\hyperlink{namespacetrain__and__evaluate_a97d4842a7f13fbd3d29337101d2293e9}{default}}
+\item 
+\mbox{\hyperlink{namespacetrain__and__evaluate_a3b08b717e4c181d2abb2c0f62009dc88}{help}}
+\item 
+\mbox{\hyperlink{namespacetrain__and__evaluate_ab7a9d726971261eb3dc135ded029beca}{args}} = parser.\+parse\+\_\+args()
+\item 
+\mbox{\hyperlink{namespacetrain__and__evaluate_a26641d819bc631dc680bf22da4cb4cfa}{json\+\_\+path}} = os.\+path.\+join(args.\+test\+\_\+dir, \char`\"{}params.\+json\char`\"{})
+\item 
+\mbox{\hyperlink{namespacetrain__and__evaluate_a11494f0b34bc57eb91121b979a6baef6}{params}} = \mbox{\hyperlink{classutils_1_1Params}{utils.\+Params}}(\mbox{\hyperlink{namespacetrain__and__evaluate_a26641d819bc631dc680bf22da4cb4cfa}{json\+\_\+path}})
+\item 
+\mbox{\hyperlink{namespacetrain__and__evaluate_a5cddb77517a5b6bda4719af839f505d0}{cuda}}
+\item 
+\mbox{\hyperlink{namespacetrain__and__evaluate_af0be7e022fee5339700534f97015484c}{train\+\_\+dataset}} = DD(os.\+path.\+join(args.\+data\+\_\+dir, \textquotesingle{}train.\+json\textquotesingle{}))
+\item 
+\mbox{\hyperlink{namespacetrain__and__evaluate_a9b17ead5379600dbb160a7cf677af311}{val\+\_\+dataset}} = DD(os.\+path.\+join(args.\+data\+\_\+dir, \textquotesingle{}valid.\+json\textquotesingle{}))
+\item 
+\mbox{\hyperlink{namespacetrain__and__evaluate_a02e79f4f33c6fb442ecaffa53ccb3b14}{train\+\_\+dl}}
+\item 
+\mbox{\hyperlink{namespacetrain__and__evaluate_a580fe1df1d794242923e0a24941808ce}{val\+\_\+dl}}
+\item 
+\mbox{\hyperlink{namespacetrain__and__evaluate_a232e63cbfa67fd4a38c5ff47a7d3eea5}{g\+\_\+model}} = cgan.\+Generator(\mbox{\hyperlink{namespacetrain__and__evaluate_a11494f0b34bc57eb91121b979a6baef6}{params}}).\mbox{\hyperlink{namespacetrain__and__evaluate_a5cddb77517a5b6bda4719af839f505d0}{cuda}}() if params.\+cuda else cgan.\+Generator(\mbox{\hyperlink{namespacetrain__and__evaluate_a11494f0b34bc57eb91121b979a6baef6}{params}})
+\item 
+\mbox{\hyperlink{namespacetrain__and__evaluate_ae757f89c26c6ef7e0023211a76ca7c3a}{d\+\_\+model}} = cgan.\+Discriminator(\mbox{\hyperlink{namespacetrain__and__evaluate_a11494f0b34bc57eb91121b979a6baef6}{params}}).\mbox{\hyperlink{namespacetrain__and__evaluate_a5cddb77517a5b6bda4719af839f505d0}{cuda}}() if params.\+cuda else cgan.\+Discriminator(\mbox{\hyperlink{namespacetrain__and__evaluate_a11494f0b34bc57eb91121b979a6baef6}{params}})
+\item 
+\mbox{\hyperlink{namespacetrain__and__evaluate_ace7e2f113ad67b7e5386c2f18a74d11a}{g\+\_\+optimizer}} = optim.\+Adam(g\+\_\+model.\+parameters(), lr=params.\+learning\+\_\+rate, betas=(params.\+beta1, 0.\+999))
+\item 
+\mbox{\hyperlink{namespacetrain__and__evaluate_a8ffa6fcf14c1b38b86199f773dd147ef}{d\+\_\+optimizer}} = optim.\+Adam(d\+\_\+model.\+parameters(), lr=params.\+learning\+\_\+rate, betas=(params.\+beta1, 0.\+999))
+\item 
+\mbox{\hyperlink{namespacetrain__and__evaluate_a1b12f81b90b9e5f908cf874fc3d8a400}{checkpoint\+\_\+dir}} = os.\+path.\+join(args.\+test\+\_\+dir, \textquotesingle{}checkpoints\textquotesingle{})
+\item 
+\mbox{\hyperlink{namespacetrain__and__evaluate_a3e9ec92e0acbc400d4eac392df6c33aa}{gen\+\_\+restore\+\_\+path}} = os.\+path.\+join(\mbox{\hyperlink{namespacetrain__and__evaluate_a1b12f81b90b9e5f908cf874fc3d8a400}{checkpoint\+\_\+dir}}, args.\+gen\+\_\+restore\+\_\+file)
+\item 
+\mbox{\hyperlink{namespacetrain__and__evaluate_a9131a2c88a740fa45d5cf04b951422c7}{disc\+\_\+restore\+\_\+path}} = os.\+path.\+join(\mbox{\hyperlink{namespacetrain__and__evaluate_a1b12f81b90b9e5f908cf874fc3d8a400}{checkpoint\+\_\+dir}}, args.\+disc\+\_\+restore\+\_\+file)
+\item 
+\mbox{\hyperlink{namespacetrain__and__evaluate_a97fa21655ecdef73979ef7306efc6d5f}{example\+\_\+conditions\+\_\+batch}} = example\+\_\+conditions\+\_\+batch.\+cuda(non\+\_\+blocking=True)
+\item 
+\mbox{\hyperlink{namespacetrain__and__evaluate_a225a043f9dbeacaa8a90ad3fbccb37a1}{example\+\_\+real\+\_\+data\+\_\+batch}} = example\+\_\+real\+\_\+data\+\_\+batch.\+cuda(non\+\_\+blocking=True)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacetrain__and__evaluate_a9c18e56ede22f6f2aef4a49bb4757d96}\label{namespacetrain__and__evaluate_a9c18e56ede22f6f2aef4a49bb4757d96}} 
+\index{train\_and\_evaluate@{train\_and\_evaluate}!calc\_gradient\_penalty@{calc\_gradient\_penalty}}
+\index{calc\_gradient\_penalty@{calc\_gradient\_penalty}!train\_and\_evaluate@{train\_and\_evaluate}}
+\doxysubsubsection{\texorpdfstring{calc\_gradient\_penalty()}{calc\_gradient\_penalty()}}
+{\footnotesize\ttfamily def train\+\_\+and\+\_\+evaluate.\+calc\+\_\+gradient\+\_\+penalty (\begin{DoxyParamCaption}\item[{}]{params,  }\item[{}]{d\+\_\+model,  }\item[{}]{real\+\_\+data,  }\item[{}]{fake\+\_\+data,  }\item[{}]{conditions }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Calculate the gradient penalty for WGAN-GP.
+
+This function computes the gradient penalty term for the Wasserstein GAN with
+Gradient Penalty (WGAN-GP) to enforce the Lipschitz constraint in the discriminator.
+
+@param params: Model hyperparameters.
+@param d_model: Discriminator model.
+@param real_data: Real data samples.
+@param fake_data: Fake data generated by the generator.
+@param conditions: Conditioning variables for the conditional GAN.
+
+@return: The calculated gradient penalty.
+\end{DoxyVerb}
+ Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacetrain__and__evaluate_a9c18e56ede22f6f2aef4a49bb4757d96_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacetrain__and__evaluate_a7b16609a7ecc37c900206383458bd994}\label{namespacetrain__and__evaluate_a7b16609a7ecc37c900206383458bd994}} 
+\index{train\_and\_evaluate@{train\_and\_evaluate}!disc\_train\_step@{disc\_train\_step}}
+\index{disc\_train\_step@{disc\_train\_step}!train\_and\_evaluate@{train\_and\_evaluate}}
+\doxysubsubsection{\texorpdfstring{disc\_train\_step()}{disc\_train\_step()}}
+{\footnotesize\ttfamily def train\+\_\+and\+\_\+evaluate.\+disc\+\_\+train\+\_\+step (\begin{DoxyParamCaption}\item[{}]{params,  }\item[{}]{d\+\_\+model,  }\item[{}]{g\+\_\+model,  }\item[{}]{d\+\_\+optimizer,  }\item[{}]{real\+\_\+data,  }\item[{}]{conditions }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}One training step of the Discriminator model.
+
+This function trains the discriminator on both real data and fake data generated
+by the generator. The loss includes a gradient penalty term for WGAN-GP.
+
+@param params: Model hyperparameters.
+@param d_model: Discriminator model.
+@param g_model: Generator model.
+@param d_optimizer: Optimizer for the discriminator.
+@param real_data: Real data samples.
+@param conditions: Conditioning variables for the conditional GAN.
+
+@return: The discriminator loss value.
+\end{DoxyVerb}
+ Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacetrain__and__evaluate_a7b16609a7ecc37c900206383458bd994_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacetrain__and__evaluate_a7b16609a7ecc37c900206383458bd994_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacetrain__and__evaluate_a67fcf6fce35f6016edb9b940fa072251}\label{namespacetrain__and__evaluate_a67fcf6fce35f6016edb9b940fa072251}} 
+\index{train\_and\_evaluate@{train\_and\_evaluate}!evaluate@{evaluate}}
+\index{evaluate@{evaluate}!train\_and\_evaluate@{train\_and\_evaluate}}
+\doxysubsubsection{\texorpdfstring{evaluate()}{evaluate()}}
+{\footnotesize\ttfamily def train\+\_\+and\+\_\+evaluate.\+evaluate (\begin{DoxyParamCaption}\item[{}]{g\+\_\+model,  }\item[{}]{val\+\_\+dataloader,  }\item[{}]{params }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Evaluate the Generator on the validation dataset.
+
+This function evaluates the generator by computing the generator loss, MSE,
+and PCC on the validation dataset.
+
+@param g_model: Generator model.
+@param val_dataloader: DataLoader for the validation dataset.
+@param params: Model hyperparameters.
+
+@return: Validation metrics, including generator loss, MSE, and PCC.
+\end{DoxyVerb}
+ Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacetrain__and__evaluate_a67fcf6fce35f6016edb9b940fa072251_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacetrain__and__evaluate_a67fcf6fce35f6016edb9b940fa072251_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacetrain__and__evaluate_a6320672da4072fad4f3fc611419728d1}\label{namespacetrain__and__evaluate_a6320672da4072fad4f3fc611419728d1}} 
+\index{train\_and\_evaluate@{train\_and\_evaluate}!gen\_train\_step@{gen\_train\_step}}
+\index{gen\_train\_step@{gen\_train\_step}!train\_and\_evaluate@{train\_and\_evaluate}}
+\doxysubsubsection{\texorpdfstring{gen\_train\_step()}{gen\_train\_step()}}
+{\footnotesize\ttfamily def train\+\_\+and\+\_\+evaluate.\+gen\+\_\+train\+\_\+step (\begin{DoxyParamCaption}\item[{}]{params,  }\item[{}]{d\+\_\+model,  }\item[{}]{g\+\_\+model,  }\item[{}]{g\+\_\+optimizer,  }\item[{}]{conditions }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}One training step of the Generator model.
+
+This function trains the generator by minimizing the negative discriminator score
+for the generated (fake) data. This encourages the generator to produce more realistic
+data that fools the discriminator.
+
+@param params: Model hyperparameters.
+@param d_model: Discriminator model.
+@param g_model: Generator model.
+@param g_optimizer: Optimizer for the generator.
+@param conditions: Conditioning variables for the conditional GAN.
+
+@return: The generator loss value.
+\end{DoxyVerb}
+ Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacetrain__and__evaluate_a6320672da4072fad4f3fc611419728d1_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacetrain__and__evaluate_a2611a914d78140e9ca6a090e916c4fb9}\label{namespacetrain__and__evaluate_a2611a914d78140e9ca6a090e916c4fb9}} 
+\index{train\_and\_evaluate@{train\_and\_evaluate}!print\_model\_info@{print\_model\_info}}
+\index{print\_model\_info@{print\_model\_info}!train\_and\_evaluate@{train\_and\_evaluate}}
+\doxysubsubsection{\texorpdfstring{print\_model\_info()}{print\_model\_info()}}
+{\footnotesize\ttfamily def train\+\_\+and\+\_\+evaluate.\+print\+\_\+model\+\_\+info (\begin{DoxyParamCaption}\item[{}]{g\+\_\+model,  }\item[{}]{d\+\_\+model,  }\item[{}]{conditions\+\_\+batch,  }\item[{}]{real\+\_\+data\+\_\+batch,  }\item[{}]{z\+\_\+dim }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Print model structure and input/output shapes for both the generator and discriminator.
+
+@param g_model: Generator model.
+@param d_model: Discriminator model.
+@param conditions_batch: A batch of condition inputs.
+@param real_data_batch: A batch of real data inputs.
+@param z_dim: Dimension of the latent space (noise input) for the generator.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacetrain__and__evaluate_a3d3022a7c8db838460709eec57bdd722}\label{namespacetrain__and__evaluate_a3d3022a7c8db838460709eec57bdd722}} 
+\index{train\_and\_evaluate@{train\_and\_evaluate}!train\_and\_evaluate@{train\_and\_evaluate}}
+\index{train\_and\_evaluate@{train\_and\_evaluate}!train\_and\_evaluate@{train\_and\_evaluate}}
+\doxysubsubsection{\texorpdfstring{train\_and\_evaluate()}{train\_and\_evaluate()}}
+{\footnotesize\ttfamily def train\+\_\+and\+\_\+evaluate.\+train\+\_\+and\+\_\+evaluate (\begin{DoxyParamCaption}\item[{}]{g\+\_\+model,  }\item[{}]{d\+\_\+model,  }\item[{}]{train\+\_\+dataloader,  }\item[{}]{val\+\_\+dataloader,  }\item[{}]{g\+\_\+optimizer,  }\item[{}]{d\+\_\+optimizer,  }\item[{}]{params,  }\item[{}]{test\+\_\+dir }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Train and evaluate the model, and save the best model.
+
+This function trains the generator and discriminator models for multiple epochs,
+evaluates their performance on the validation set, and saves the best-performing
+models to disk.
+
+@param g_model: Generator model.
+@param d_model: Discriminator model.
+@param train_dataloader: DataLoader for the training dataset.
+@param val_dataloader: DataLoader for the validation dataset.
+@param g_optimizer: Optimizer for the generator.
+@param d_optimizer: Optimizer for the discriminator.
+@param params: Model hyperparameters.
+@param test_dir: Directory to save model checkpoints and metrics.
+\end{DoxyVerb}
+ Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacetrain__and__evaluate_a3d3022a7c8db838460709eec57bdd722_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacetrain__and__evaluate_aa11a58cd6895262a7a9275db00aa9ffa}\label{namespacetrain__and__evaluate_aa11a58cd6895262a7a9275db00aa9ffa}} 
+\index{train\_and\_evaluate@{train\_and\_evaluate}!train\_epoch@{train\_epoch}}
+\index{train\_epoch@{train\_epoch}!train\_and\_evaluate@{train\_and\_evaluate}}
+\doxysubsubsection{\texorpdfstring{train\_epoch()}{train\_epoch()}}
+{\footnotesize\ttfamily def train\+\_\+and\+\_\+evaluate.\+train\+\_\+epoch (\begin{DoxyParamCaption}\item[{}]{g\+\_\+model,  }\item[{}]{d\+\_\+model,  }\item[{}]{g\+\_\+optimizer,  }\item[{}]{d\+\_\+optimizer,  }\item[{}]{dataloader,  }\item[{}]{params }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Train the Generator and Discriminator for one epoch.
+
+This function loops over the dataset, training both the generator and discriminator
+models on each batch of data. It also computes key metrics such as MSE and Pearson
+Correlation Coefficient (PCC) for evaluation.
+
+@param g_model: Generator model.
+@param d_model: Discriminator model.
+@param g_optimizer: Optimizer for the generator.
+@param d_optimizer: Optimizer for the discriminator.
+@param dataloader: DataLoader for the training dataset.
+@param params: Model hyperparameters.
+
+@return: Training metrics, including generator loss, discriminator loss, MSE, and PCC.
+\end{DoxyVerb}
+ Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacetrain__and__evaluate_aa11a58cd6895262a7a9275db00aa9ffa_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacetrain__and__evaluate_aa11a58cd6895262a7a9275db00aa9ffa_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespacetrain__and__evaluate_ab7a9d726971261eb3dc135ded029beca}\label{namespacetrain__and__evaluate_ab7a9d726971261eb3dc135ded029beca}} 
+\index{train\_and\_evaluate@{train\_and\_evaluate}!args@{args}}
+\index{args@{args}!train\_and\_evaluate@{train\_and\_evaluate}}
+\doxysubsubsection{\texorpdfstring{args}{args}}
+{\footnotesize\ttfamily train\+\_\+and\+\_\+evaluate.\+args = parser.\+parse\+\_\+args()}
+
+\mbox{\Hypertarget{namespacetrain__and__evaluate_a1b12f81b90b9e5f908cf874fc3d8a400}\label{namespacetrain__and__evaluate_a1b12f81b90b9e5f908cf874fc3d8a400}} 
+\index{train\_and\_evaluate@{train\_and\_evaluate}!checkpoint\_dir@{checkpoint\_dir}}
+\index{checkpoint\_dir@{checkpoint\_dir}!train\_and\_evaluate@{train\_and\_evaluate}}
+\doxysubsubsection{\texorpdfstring{checkpoint\_dir}{checkpoint\_dir}}
+{\footnotesize\ttfamily train\+\_\+and\+\_\+evaluate.\+checkpoint\+\_\+dir = os.\+path.\+join(args.\+test\+\_\+dir, \textquotesingle{}checkpoints\textquotesingle{})}
+
+\mbox{\Hypertarget{namespacetrain__and__evaluate_a5cddb77517a5b6bda4719af839f505d0}\label{namespacetrain__and__evaluate_a5cddb77517a5b6bda4719af839f505d0}} 
+\index{train\_and\_evaluate@{train\_and\_evaluate}!cuda@{cuda}}
+\index{cuda@{cuda}!train\_and\_evaluate@{train\_and\_evaluate}}
+\doxysubsubsection{\texorpdfstring{cuda}{cuda}}
+{\footnotesize\ttfamily train\+\_\+and\+\_\+evaluate.\+cuda}
+
+\mbox{\Hypertarget{namespacetrain__and__evaluate_ae757f89c26c6ef7e0023211a76ca7c3a}\label{namespacetrain__and__evaluate_ae757f89c26c6ef7e0023211a76ca7c3a}} 
+\index{train\_and\_evaluate@{train\_and\_evaluate}!d\_model@{d\_model}}
+\index{d\_model@{d\_model}!train\_and\_evaluate@{train\_and\_evaluate}}
+\doxysubsubsection{\texorpdfstring{d\_model}{d\_model}}
+{\footnotesize\ttfamily train\+\_\+and\+\_\+evaluate.\+d\+\_\+model = cgan.\+Discriminator(\mbox{\hyperlink{namespacetrain__and__evaluate_a11494f0b34bc57eb91121b979a6baef6}{params}}).\mbox{\hyperlink{namespacetrain__and__evaluate_a5cddb77517a5b6bda4719af839f505d0}{cuda}}() if params.\+cuda else cgan.\+Discriminator(\mbox{\hyperlink{namespacetrain__and__evaluate_a11494f0b34bc57eb91121b979a6baef6}{params}})}
+
+\mbox{\Hypertarget{namespacetrain__and__evaluate_a8ffa6fcf14c1b38b86199f773dd147ef}\label{namespacetrain__and__evaluate_a8ffa6fcf14c1b38b86199f773dd147ef}} 
+\index{train\_and\_evaluate@{train\_and\_evaluate}!d\_optimizer@{d\_optimizer}}
+\index{d\_optimizer@{d\_optimizer}!train\_and\_evaluate@{train\_and\_evaluate}}
+\doxysubsubsection{\texorpdfstring{d\_optimizer}{d\_optimizer}}
+{\footnotesize\ttfamily train\+\_\+and\+\_\+evaluate.\+d\+\_\+optimizer = optim.\+Adam(d\+\_\+model.\+parameters(), lr=params.\+learning\+\_\+rate, betas=(params.\+beta1, 0.\+999))}
+
+\mbox{\Hypertarget{namespacetrain__and__evaluate_a97d4842a7f13fbd3d29337101d2293e9}\label{namespacetrain__and__evaluate_a97d4842a7f13fbd3d29337101d2293e9}} 
+\index{train\_and\_evaluate@{train\_and\_evaluate}!default@{default}}
+\index{default@{default}!train\_and\_evaluate@{train\_and\_evaluate}}
+\doxysubsubsection{\texorpdfstring{default}{default}}
+{\footnotesize\ttfamily train\+\_\+and\+\_\+evaluate.\+default}
+
+\mbox{\Hypertarget{namespacetrain__and__evaluate_a9131a2c88a740fa45d5cf04b951422c7}\label{namespacetrain__and__evaluate_a9131a2c88a740fa45d5cf04b951422c7}} 
+\index{train\_and\_evaluate@{train\_and\_evaluate}!disc\_restore\_path@{disc\_restore\_path}}
+\index{disc\_restore\_path@{disc\_restore\_path}!train\_and\_evaluate@{train\_and\_evaluate}}
+\doxysubsubsection{\texorpdfstring{disc\_restore\_path}{disc\_restore\_path}}
+{\footnotesize\ttfamily train\+\_\+and\+\_\+evaluate.\+disc\+\_\+restore\+\_\+path = os.\+path.\+join(\mbox{\hyperlink{namespacetrain__and__evaluate_a1b12f81b90b9e5f908cf874fc3d8a400}{checkpoint\+\_\+dir}}, args.\+disc\+\_\+restore\+\_\+file)}
+
+\mbox{\Hypertarget{namespacetrain__and__evaluate_a97fa21655ecdef73979ef7306efc6d5f}\label{namespacetrain__and__evaluate_a97fa21655ecdef73979ef7306efc6d5f}} 
+\index{train\_and\_evaluate@{train\_and\_evaluate}!example\_conditions\_batch@{example\_conditions\_batch}}
+\index{example\_conditions\_batch@{example\_conditions\_batch}!train\_and\_evaluate@{train\_and\_evaluate}}
+\doxysubsubsection{\texorpdfstring{example\_conditions\_batch}{example\_conditions\_batch}}
+{\footnotesize\ttfamily train\+\_\+and\+\_\+evaluate.\+example\+\_\+conditions\+\_\+batch = example\+\_\+conditions\+\_\+batch.\+cuda(non\+\_\+blocking=True)}
+
+\mbox{\Hypertarget{namespacetrain__and__evaluate_a225a043f9dbeacaa8a90ad3fbccb37a1}\label{namespacetrain__and__evaluate_a225a043f9dbeacaa8a90ad3fbccb37a1}} 
+\index{train\_and\_evaluate@{train\_and\_evaluate}!example\_real\_data\_batch@{example\_real\_data\_batch}}
+\index{example\_real\_data\_batch@{example\_real\_data\_batch}!train\_and\_evaluate@{train\_and\_evaluate}}
+\doxysubsubsection{\texorpdfstring{example\_real\_data\_batch}{example\_real\_data\_batch}}
+{\footnotesize\ttfamily train\+\_\+and\+\_\+evaluate.\+example\+\_\+real\+\_\+data\+\_\+batch = example\+\_\+real\+\_\+data\+\_\+batch.\+cuda(non\+\_\+blocking=True)}
+
+\mbox{\Hypertarget{namespacetrain__and__evaluate_a232e63cbfa67fd4a38c5ff47a7d3eea5}\label{namespacetrain__and__evaluate_a232e63cbfa67fd4a38c5ff47a7d3eea5}} 
+\index{train\_and\_evaluate@{train\_and\_evaluate}!g\_model@{g\_model}}
+\index{g\_model@{g\_model}!train\_and\_evaluate@{train\_and\_evaluate}}
+\doxysubsubsection{\texorpdfstring{g\_model}{g\_model}}
+{\footnotesize\ttfamily train\+\_\+and\+\_\+evaluate.\+g\+\_\+model = cgan.\+Generator(\mbox{\hyperlink{namespacetrain__and__evaluate_a11494f0b34bc57eb91121b979a6baef6}{params}}).\mbox{\hyperlink{namespacetrain__and__evaluate_a5cddb77517a5b6bda4719af839f505d0}{cuda}}() if params.\+cuda else cgan.\+Generator(\mbox{\hyperlink{namespacetrain__and__evaluate_a11494f0b34bc57eb91121b979a6baef6}{params}})}
+
+\mbox{\Hypertarget{namespacetrain__and__evaluate_ace7e2f113ad67b7e5386c2f18a74d11a}\label{namespacetrain__and__evaluate_ace7e2f113ad67b7e5386c2f18a74d11a}} 
+\index{train\_and\_evaluate@{train\_and\_evaluate}!g\_optimizer@{g\_optimizer}}
+\index{g\_optimizer@{g\_optimizer}!train\_and\_evaluate@{train\_and\_evaluate}}
+\doxysubsubsection{\texorpdfstring{g\_optimizer}{g\_optimizer}}
+{\footnotesize\ttfamily train\+\_\+and\+\_\+evaluate.\+g\+\_\+optimizer = optim.\+Adam(g\+\_\+model.\+parameters(), lr=params.\+learning\+\_\+rate, betas=(params.\+beta1, 0.\+999))}
+
+\mbox{\Hypertarget{namespacetrain__and__evaluate_a3e9ec92e0acbc400d4eac392df6c33aa}\label{namespacetrain__and__evaluate_a3e9ec92e0acbc400d4eac392df6c33aa}} 
+\index{train\_and\_evaluate@{train\_and\_evaluate}!gen\_restore\_path@{gen\_restore\_path}}
+\index{gen\_restore\_path@{gen\_restore\_path}!train\_and\_evaluate@{train\_and\_evaluate}}
+\doxysubsubsection{\texorpdfstring{gen\_restore\_path}{gen\_restore\_path}}
+{\footnotesize\ttfamily train\+\_\+and\+\_\+evaluate.\+gen\+\_\+restore\+\_\+path = os.\+path.\+join(\mbox{\hyperlink{namespacetrain__and__evaluate_a1b12f81b90b9e5f908cf874fc3d8a400}{checkpoint\+\_\+dir}}, args.\+gen\+\_\+restore\+\_\+file)}
+
+\mbox{\Hypertarget{namespacetrain__and__evaluate_a3b08b717e4c181d2abb2c0f62009dc88}\label{namespacetrain__and__evaluate_a3b08b717e4c181d2abb2c0f62009dc88}} 
+\index{train\_and\_evaluate@{train\_and\_evaluate}!help@{help}}
+\index{help@{help}!train\_and\_evaluate@{train\_and\_evaluate}}
+\doxysubsubsection{\texorpdfstring{help}{help}}
+{\footnotesize\ttfamily train\+\_\+and\+\_\+evaluate.\+help}
+
+\mbox{\Hypertarget{namespacetrain__and__evaluate_a26641d819bc631dc680bf22da4cb4cfa}\label{namespacetrain__and__evaluate_a26641d819bc631dc680bf22da4cb4cfa}} 
+\index{train\_and\_evaluate@{train\_and\_evaluate}!json\_path@{json\_path}}
+\index{json\_path@{json\_path}!train\_and\_evaluate@{train\_and\_evaluate}}
+\doxysubsubsection{\texorpdfstring{json\_path}{json\_path}}
+{\footnotesize\ttfamily train\+\_\+and\+\_\+evaluate.\+json\+\_\+path = os.\+path.\+join(args.\+test\+\_\+dir, \char`\"{}params.\+json\char`\"{})}
+
+\mbox{\Hypertarget{namespacetrain__and__evaluate_a11494f0b34bc57eb91121b979a6baef6}\label{namespacetrain__and__evaluate_a11494f0b34bc57eb91121b979a6baef6}} 
+\index{train\_and\_evaluate@{train\_and\_evaluate}!params@{params}}
+\index{params@{params}!train\_and\_evaluate@{train\_and\_evaluate}}
+\doxysubsubsection{\texorpdfstring{params}{params}}
+{\footnotesize\ttfamily train\+\_\+and\+\_\+evaluate.\+params = \mbox{\hyperlink{classutils_1_1Params}{utils.\+Params}}(\mbox{\hyperlink{namespacetrain__and__evaluate_a26641d819bc631dc680bf22da4cb4cfa}{json\+\_\+path}})}
+
+\mbox{\Hypertarget{namespacetrain__and__evaluate_a5834ff30fde934ad8810c77a3b883ff4}\label{namespacetrain__and__evaluate_a5834ff30fde934ad8810c77a3b883ff4}} 
+\index{train\_and\_evaluate@{train\_and\_evaluate}!parser@{parser}}
+\index{parser@{parser}!train\_and\_evaluate@{train\_and\_evaluate}}
+\doxysubsubsection{\texorpdfstring{parser}{parser}}
+{\footnotesize\ttfamily train\+\_\+and\+\_\+evaluate.\+parser = argparse.\+Argument\+Parser()}
+
+\mbox{\Hypertarget{namespacetrain__and__evaluate_af0be7e022fee5339700534f97015484c}\label{namespacetrain__and__evaluate_af0be7e022fee5339700534f97015484c}} 
+\index{train\_and\_evaluate@{train\_and\_evaluate}!train\_dataset@{train\_dataset}}
+\index{train\_dataset@{train\_dataset}!train\_and\_evaluate@{train\_and\_evaluate}}
+\doxysubsubsection{\texorpdfstring{train\_dataset}{train\_dataset}}
+{\footnotesize\ttfamily train\+\_\+and\+\_\+evaluate.\+train\+\_\+dataset = DD(os.\+path.\+join(args.\+data\+\_\+dir, \textquotesingle{}train.\+json\textquotesingle{}))}
+
+\mbox{\Hypertarget{namespacetrain__and__evaluate_a02e79f4f33c6fb442ecaffa53ccb3b14}\label{namespacetrain__and__evaluate_a02e79f4f33c6fb442ecaffa53ccb3b14}} 
+\index{train\_and\_evaluate@{train\_and\_evaluate}!train\_dl@{train\_dl}}
+\index{train\_dl@{train\_dl}!train\_and\_evaluate@{train\_and\_evaluate}}
+\doxysubsubsection{\texorpdfstring{train\_dl}{train\_dl}}
+{\footnotesize\ttfamily train\+\_\+and\+\_\+evaluate.\+train\+\_\+dl}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 =  DataLoader(train\_dataset, batch\_size=params.batch\_size, shuffle=\textcolor{keyword}{True},}
+\DoxyCodeLine{2                           num\_workers=params.num\_workers, pin\_memory=params.cuda)}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacetrain__and__evaluate_a9b17ead5379600dbb160a7cf677af311}\label{namespacetrain__and__evaluate_a9b17ead5379600dbb160a7cf677af311}} 
+\index{train\_and\_evaluate@{train\_and\_evaluate}!val\_dataset@{val\_dataset}}
+\index{val\_dataset@{val\_dataset}!train\_and\_evaluate@{train\_and\_evaluate}}
+\doxysubsubsection{\texorpdfstring{val\_dataset}{val\_dataset}}
+{\footnotesize\ttfamily train\+\_\+and\+\_\+evaluate.\+val\+\_\+dataset = DD(os.\+path.\+join(args.\+data\+\_\+dir, \textquotesingle{}valid.\+json\textquotesingle{}))}
+
+\mbox{\Hypertarget{namespacetrain__and__evaluate_a580fe1df1d794242923e0a24941808ce}\label{namespacetrain__and__evaluate_a580fe1df1d794242923e0a24941808ce}} 
+\index{train\_and\_evaluate@{train\_and\_evaluate}!val\_dl@{val\_dl}}
+\index{val\_dl@{val\_dl}!train\_and\_evaluate@{train\_and\_evaluate}}
+\doxysubsubsection{\texorpdfstring{val\_dl}{val\_dl}}
+{\footnotesize\ttfamily train\+\_\+and\+\_\+evaluate.\+val\+\_\+dl}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 =  DataLoader(val\_dataset, batch\_size=params.batch\_size, shuffle=\textcolor{keyword}{False},}
+\DoxyCodeLine{2                         num\_workers=params.num\_workers, pin\_memory=params.cuda)}
+
+\end{DoxyCode}

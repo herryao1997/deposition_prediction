@@ -410,7 +410,7 @@ def plot_cartesian(x, y, thickness, img_name, output_folder):
     plt.contourf(grid_x, grid_y, grid_values, 100, cmap='viridis')
     cbar = plt.colorbar()
     cbar.set_label('Thickness (nm)', fontsize=12)
-    cbar.set_clim(320, 900)  # this is for the colormap uniform clipping.
+    cbar.set_clim(320, 750)  # this is for the colormap uniform clipping.
 
     # Scatter original data points
     plt.scatter(x, y, c='black', s=20, label='Data Points')
@@ -488,7 +488,7 @@ def plot_polar(r, theta, thickness, img_name, output_folder):
     # Add color bar with label
     cbar = plt.colorbar(c, ax=ax)
     cbar.set_label('Thickness (nm)', fontsize=12)
-    c.set_clim(320, 900)  # this is for the colormap uniform clipping.
+    c.set_clim(320, 750)  # this is for the colormap uniform clipping.
 
     # Scatter original data points
     ax.scatter(theta, r, c='red', s=20, label='Data Points')
@@ -599,7 +599,7 @@ def plot_3d_polar(r, theta, thickness, img_name, output_folder):
 
     # Add colorbar
     cbar = fig.colorbar(surf, shrink=0.5, aspect=10, label='Thickness (nm)')
-    surf.set_clim(320, 900)
+    surf.set_clim(320, 750)
 
     # Adjust view angle (optional)
     ax.view_init(elev=30, azim=45)
@@ -672,7 +672,7 @@ def plot_3d_cartesian(x, y, thickness, img_name, output_folder):
 
     # Add colorbar
     cbar = fig.colorbar(surf, shrink=0.5, aspect=10, label='Thickness (nm)')
-    surf.set_clim(320, 900)
+    surf.set_clim(320, 750)
 
     # Save and close the plot
     img_path = os.path.join(output_folder, img_name)

@@ -1,0 +1,67 @@
+\hypertarget{train__and__evaluate_8py}{}\doxysection{train\+\_\+and\+\_\+evaluate.\+py File Reference}
+\label{train__and__evaluate_8py}\index{train\_and\_evaluate.py@{train\_and\_evaluate.py}}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacetrain__and__evaluate}{train\+\_\+and\+\_\+evaluate}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacetrain__and__evaluate_a9c18e56ede22f6f2aef4a49bb4757d96}{train\+\_\+and\+\_\+evaluate.\+calc\+\_\+gradient\+\_\+penalty}} (params, d\+\_\+model, real\+\_\+data, fake\+\_\+data, conditions)
+\item 
+def \mbox{\hyperlink{namespacetrain__and__evaluate_a7b16609a7ecc37c900206383458bd994}{train\+\_\+and\+\_\+evaluate.\+disc\+\_\+train\+\_\+step}} (params, d\+\_\+model, g\+\_\+model, d\+\_\+optimizer, real\+\_\+data, conditions)
+\item 
+def \mbox{\hyperlink{namespacetrain__and__evaluate_a6320672da4072fad4f3fc611419728d1}{train\+\_\+and\+\_\+evaluate.\+gen\+\_\+train\+\_\+step}} (params, d\+\_\+model, g\+\_\+model, g\+\_\+optimizer, conditions)
+\item 
+def \mbox{\hyperlink{namespacetrain__and__evaluate_a2611a914d78140e9ca6a090e916c4fb9}{train\+\_\+and\+\_\+evaluate.\+print\+\_\+model\+\_\+info}} (g\+\_\+model, d\+\_\+model, conditions\+\_\+batch, real\+\_\+data\+\_\+batch, z\+\_\+dim)
+\item 
+def \mbox{\hyperlink{namespacetrain__and__evaluate_aa11a58cd6895262a7a9275db00aa9ffa}{train\+\_\+and\+\_\+evaluate.\+train\+\_\+epoch}} (g\+\_\+model, d\+\_\+model, g\+\_\+optimizer, d\+\_\+optimizer, dataloader, params)
+\item 
+def \mbox{\hyperlink{namespacetrain__and__evaluate_a67fcf6fce35f6016edb9b940fa072251}{train\+\_\+and\+\_\+evaluate.\+evaluate}} (g\+\_\+model, val\+\_\+dataloader, params)
+\item 
+def \mbox{\hyperlink{namespacetrain__and__evaluate_a3d3022a7c8db838460709eec57bdd722}{train\+\_\+and\+\_\+evaluate.\+train\+\_\+and\+\_\+evaluate}} (g\+\_\+model, d\+\_\+model, train\+\_\+dataloader, val\+\_\+dataloader, g\+\_\+optimizer, d\+\_\+optimizer, params, test\+\_\+dir)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacetrain__and__evaluate_a5834ff30fde934ad8810c77a3b883ff4}{train\+\_\+and\+\_\+evaluate.\+parser}} = argparse.\+Argument\+Parser()
+\item 
+\mbox{\hyperlink{namespacetrain__and__evaluate_a97d4842a7f13fbd3d29337101d2293e9}{train\+\_\+and\+\_\+evaluate.\+default}}
+\item 
+\mbox{\hyperlink{namespacetrain__and__evaluate_a3b08b717e4c181d2abb2c0f62009dc88}{train\+\_\+and\+\_\+evaluate.\+help}}
+\item 
+\mbox{\hyperlink{namespacetrain__and__evaluate_ab7a9d726971261eb3dc135ded029beca}{train\+\_\+and\+\_\+evaluate.\+args}} = parser.\+parse\+\_\+args()
+\item 
+\mbox{\hyperlink{namespacetrain__and__evaluate_a26641d819bc631dc680bf22da4cb4cfa}{train\+\_\+and\+\_\+evaluate.\+json\+\_\+path}} = os.\+path.\+join(args.\+test\+\_\+dir, \char`\"{}params.\+json\char`\"{})
+\item 
+\mbox{\hyperlink{namespacetrain__and__evaluate_a11494f0b34bc57eb91121b979a6baef6}{train\+\_\+and\+\_\+evaluate.\+params}} = \mbox{\hyperlink{classutils_1_1Params}{utils.\+Params}}(json\+\_\+path)
+\item 
+\mbox{\hyperlink{namespacetrain__and__evaluate_a5cddb77517a5b6bda4719af839f505d0}{train\+\_\+and\+\_\+evaluate.\+cuda}}
+\item 
+\mbox{\hyperlink{namespacetrain__and__evaluate_af0be7e022fee5339700534f97015484c}{train\+\_\+and\+\_\+evaluate.\+train\+\_\+dataset}} = DD(os.\+path.\+join(args.\+data\+\_\+dir, \textquotesingle{}train.\+json\textquotesingle{}))
+\item 
+\mbox{\hyperlink{namespacetrain__and__evaluate_a9b17ead5379600dbb160a7cf677af311}{train\+\_\+and\+\_\+evaluate.\+val\+\_\+dataset}} = DD(os.\+path.\+join(args.\+data\+\_\+dir, \textquotesingle{}valid.\+json\textquotesingle{}))
+\item 
+\mbox{\hyperlink{namespacetrain__and__evaluate_a02e79f4f33c6fb442ecaffa53ccb3b14}{train\+\_\+and\+\_\+evaluate.\+train\+\_\+dl}}
+\item 
+\mbox{\hyperlink{namespacetrain__and__evaluate_a580fe1df1d794242923e0a24941808ce}{train\+\_\+and\+\_\+evaluate.\+val\+\_\+dl}}
+\item 
+\mbox{\hyperlink{namespacetrain__and__evaluate_a232e63cbfa67fd4a38c5ff47a7d3eea5}{train\+\_\+and\+\_\+evaluate.\+g\+\_\+model}} = cgan.\+Generator(params).cuda() if params.\+cuda else cgan.\+Generator(params)
+\item 
+\mbox{\hyperlink{namespacetrain__and__evaluate_ae757f89c26c6ef7e0023211a76ca7c3a}{train\+\_\+and\+\_\+evaluate.\+d\+\_\+model}} = cgan.\+Discriminator(params).cuda() if params.\+cuda else cgan.\+Discriminator(params)
+\item 
+\mbox{\hyperlink{namespacetrain__and__evaluate_ace7e2f113ad67b7e5386c2f18a74d11a}{train\+\_\+and\+\_\+evaluate.\+g\+\_\+optimizer}} = optim.\+Adam(g\+\_\+model.\+parameters(), lr=params.\+learning\+\_\+rate, betas=(params.\+beta1, 0.\+999))
+\item 
+\mbox{\hyperlink{namespacetrain__and__evaluate_a8ffa6fcf14c1b38b86199f773dd147ef}{train\+\_\+and\+\_\+evaluate.\+d\+\_\+optimizer}} = optim.\+Adam(d\+\_\+model.\+parameters(), lr=params.\+learning\+\_\+rate, betas=(params.\+beta1, 0.\+999))
+\item 
+\mbox{\hyperlink{namespacetrain__and__evaluate_a1b12f81b90b9e5f908cf874fc3d8a400}{train\+\_\+and\+\_\+evaluate.\+checkpoint\+\_\+dir}} = os.\+path.\+join(args.\+test\+\_\+dir, \textquotesingle{}checkpoints\textquotesingle{})
+\item 
+\mbox{\hyperlink{namespacetrain__and__evaluate_a3e9ec92e0acbc400d4eac392df6c33aa}{train\+\_\+and\+\_\+evaluate.\+gen\+\_\+restore\+\_\+path}} = os.\+path.\+join(checkpoint\+\_\+dir, args.\+gen\+\_\+restore\+\_\+file)
+\item 
+\mbox{\hyperlink{namespacetrain__and__evaluate_a9131a2c88a740fa45d5cf04b951422c7}{train\+\_\+and\+\_\+evaluate.\+disc\+\_\+restore\+\_\+path}} = os.\+path.\+join(checkpoint\+\_\+dir, args.\+disc\+\_\+restore\+\_\+file)
+\item 
+\mbox{\hyperlink{namespacetrain__and__evaluate_a97fa21655ecdef73979ef7306efc6d5f}{train\+\_\+and\+\_\+evaluate.\+example\+\_\+conditions\+\_\+batch}} = example\+\_\+conditions\+\_\+batch.\+cuda(non\+\_\+blocking=True)
+\item 
+\mbox{\hyperlink{namespacetrain__and__evaluate_a225a043f9dbeacaa8a90ad3fbccb37a1}{train\+\_\+and\+\_\+evaluate.\+example\+\_\+real\+\_\+data\+\_\+batch}} = example\+\_\+real\+\_\+data\+\_\+batch.\+cuda(non\+\_\+blocking=True)
+\end{DoxyCompactItemize}

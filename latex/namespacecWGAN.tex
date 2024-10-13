@@ -1,0 +1,90 @@
+\hypertarget{namespacecWGAN}{}\doxysection{c\+WGAN Namespace Reference}
+\label{namespacecWGAN}\index{cWGAN@{cWGAN}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classcWGAN_1_1Generator}{Generator}}
+\item 
+class \mbox{\hyperlink{classcWGAN_1_1Discriminator}{Discriminator}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+torch.\+Tensor \mbox{\hyperlink{namespacecWGAN_a4336282febc09a9a7e184528da844bcc}{MSE}} (torch.\+Tensor out, torch.\+Tensor truth)
+\item 
+torch.\+Tensor \mbox{\hyperlink{namespacecWGAN_a979abe80535fa49dff95221893c7f051}{VAR}} (torch.\+Tensor out)
+\item 
+torch.\+Tensor \mbox{\hyperlink{namespacecWGAN_a318d594159b14cdbe9ac1e2d57767bb1}{main\+\_\+metric}} (torch.\+Tensor out, torch.\+Tensor truth, int N)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacecWGAN_a318d594159b14cdbe9ac1e2d57767bb1}\label{namespacecWGAN_a318d594159b14cdbe9ac1e2d57767bb1}} 
+\index{cWGAN@{cWGAN}!main\_metric@{main\_metric}}
+\index{main\_metric@{main\_metric}!cWGAN@{cWGAN}}
+\doxysubsubsection{\texorpdfstring{main\_metric()}{main\_metric()}}
+{\footnotesize\ttfamily  torch.\+Tensor c\+WGAN.\+main\+\_\+metric (\begin{DoxyParamCaption}\item[{torch.\+Tensor}]{out,  }\item[{torch.\+Tensor}]{truth,  }\item[{int}]{N }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Custom metric combining Mean Squared Error (MSE) and Variance (VAR).
+
+The metric is a weighted combination of MSE and variance, with the
+weight determined by N.
+
+@param out Model output (generated data).
+@param truth Ground truth (real data).
+@param N Weighting factor.
+
+@return Computed main metric combining MSE and VAR as a torch.Tensor.
+\end{DoxyVerb}
+ Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=311pt]{namespacecWGAN_a318d594159b14cdbe9ac1e2d57767bb1_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacecWGAN_a4336282febc09a9a7e184528da844bcc}\label{namespacecWGAN_a4336282febc09a9a7e184528da844bcc}} 
+\index{cWGAN@{cWGAN}!MSE@{MSE}}
+\index{MSE@{MSE}!cWGAN@{cWGAN}}
+\doxysubsubsection{\texorpdfstring{MSE()}{MSE()}}
+{\footnotesize\ttfamily  torch.\+Tensor c\+WGAN.\+MSE (\begin{DoxyParamCaption}\item[{torch.\+Tensor}]{out,  }\item[{torch.\+Tensor}]{truth }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Mean Squared Error (MSE) loss function.
+
+@param out Model output (generated data).
+@param truth Ground truth (real data).
+
+@return Computed MSE loss as a torch.Tensor.
+\end{DoxyVerb}
+ Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=311pt]{namespacecWGAN_a4336282febc09a9a7e184528da844bcc_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacecWGAN_a979abe80535fa49dff95221893c7f051}\label{namespacecWGAN_a979abe80535fa49dff95221893c7f051}} 
+\index{cWGAN@{cWGAN}!VAR@{VAR}}
+\index{VAR@{VAR}!cWGAN@{cWGAN}}
+\doxysubsubsection{\texorpdfstring{VAR()}{VAR()}}
+{\footnotesize\ttfamily  torch.\+Tensor c\+WGAN.\+VAR (\begin{DoxyParamCaption}\item[{torch.\+Tensor}]{out }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Variance of the output data.
+
+This metric calculates the variance of the model's output, which is
+useful for evaluating the spread or diversity of the generated data.
+
+@param out Model output (generated data).
+
+@return Computed variance of the output as a torch.Tensor.
+\end{DoxyVerb}
+ Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=310pt]{namespacecWGAN_a979abe80535fa49dff95221893c7f051_icgraph}
+\end{center}
+\end{figure}

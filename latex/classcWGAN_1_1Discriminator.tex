@@ -1,0 +1,122 @@
+\hypertarget{classcWGAN_1_1Discriminator}{}\doxysection{c\+WGAN.\+Discriminator Class Reference}
+\label{classcWGAN_1_1Discriminator}\index{cWGAN.Discriminator@{cWGAN.Discriminator}}
+
+
+Inheritance diagram for c\+WGAN.\+Discriminator\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=202pt]{classcWGAN_1_1Discriminator__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for c\+WGAN.\+Discriminator\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=202pt]{classcWGAN_1_1Discriminator__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classcWGAN_1_1Discriminator_a072a774aaf1d1ed46eb436c3dd7d3d9d}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, \mbox{\hyperlink{classutils_1_1Params}{Params}} params)
+\item 
+torch.\+Tensor \mbox{\hyperlink{classcWGAN_1_1Discriminator_aabfb7b9eda1bca4c4c79fbee4ef8456a}{forward}} (self, torch.\+Tensor x, torch.\+Tensor y)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcWGAN_1_1Discriminator_ac91f0168ac3b2173f0663a93d8825d04}{act\+\_\+func}}
+\item 
+\mbox{\hyperlink{classcWGAN_1_1Discriminator_a94f25d85495ee2794571b2aac672b911}{func\+\_\+params}}
+\item 
+\mbox{\hyperlink{classcWGAN_1_1Discriminator_a5a86f98eded16aa498aff0801f58c8c5}{genout}}
+\item 
+\mbox{\hyperlink{classcWGAN_1_1Discriminator_aff78accb3a0526cec0e8d0eb3a0c9a2a}{cond}}
+\item 
+\mbox{\hyperlink{classcWGAN_1_1Discriminator_a9fb9181e235cf360eada9862b984980a}{out}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Discriminator model for conditional WGAN-GP.
+
+This model evaluates the authenticity of the generated (or real) data
+by processing both the data and the conditional input.
+
+@param params Model hyperparameters including activation function,
+              input dimensions, number of nodes, and output dimensions.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classcWGAN_1_1Discriminator_a072a774aaf1d1ed46eb436c3dd7d3d9d}\label{classcWGAN_1_1Discriminator_a072a774aaf1d1ed46eb436c3dd7d3d9d}} 
+\index{cWGAN.Discriminator@{cWGAN.Discriminator}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!cWGAN.Discriminator@{cWGAN.Discriminator}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def c\+WGAN.\+Discriminator.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{\mbox{\hyperlink{classutils_1_1Params}{Params}}}]{params }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Constructor for the Discriminator class.
+
+@param params Hyperparameters for the Discriminator including activation function,
+              input dimensions, and number of nodes.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classcWGAN_1_1Discriminator_aabfb7b9eda1bca4c4c79fbee4ef8456a}\label{classcWGAN_1_1Discriminator_aabfb7b9eda1bca4c4c79fbee4ef8456a}} 
+\index{cWGAN.Discriminator@{cWGAN.Discriminator}!forward@{forward}}
+\index{forward@{forward}!cWGAN.Discriminator@{cWGAN.Discriminator}}
+\doxysubsubsection{\texorpdfstring{forward()}{forward()}}
+{\footnotesize\ttfamily  torch.\+Tensor c\+WGAN.\+Discriminator.\+forward (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{torch.\+Tensor}]{x,  }\item[{torch.\+Tensor}]{y }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Forward pass of the Discriminator.
+
+Evaluates whether the given data (real or generated) is authentic
+based on the input data (x) and the condition (y).
+
+@param x Input data (real or generated).
+@param y Conditional input vector.
+
+@return Discriminator score (real or fake) as a torch.Tensor.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classcWGAN_1_1Discriminator_ac91f0168ac3b2173f0663a93d8825d04}\label{classcWGAN_1_1Discriminator_ac91f0168ac3b2173f0663a93d8825d04}} 
+\index{cWGAN.Discriminator@{cWGAN.Discriminator}!act\_func@{act\_func}}
+\index{act\_func@{act\_func}!cWGAN.Discriminator@{cWGAN.Discriminator}}
+\doxysubsubsection{\texorpdfstring{act\_func}{act\_func}}
+{\footnotesize\ttfamily c\+WGAN.\+Discriminator.\+act\+\_\+func}
+
+\mbox{\Hypertarget{classcWGAN_1_1Discriminator_aff78accb3a0526cec0e8d0eb3a0c9a2a}\label{classcWGAN_1_1Discriminator_aff78accb3a0526cec0e8d0eb3a0c9a2a}} 
+\index{cWGAN.Discriminator@{cWGAN.Discriminator}!cond@{cond}}
+\index{cond@{cond}!cWGAN.Discriminator@{cWGAN.Discriminator}}
+\doxysubsubsection{\texorpdfstring{cond}{cond}}
+{\footnotesize\ttfamily c\+WGAN.\+Discriminator.\+cond}
+
+\mbox{\Hypertarget{classcWGAN_1_1Discriminator_a94f25d85495ee2794571b2aac672b911}\label{classcWGAN_1_1Discriminator_a94f25d85495ee2794571b2aac672b911}} 
+\index{cWGAN.Discriminator@{cWGAN.Discriminator}!func\_params@{func\_params}}
+\index{func\_params@{func\_params}!cWGAN.Discriminator@{cWGAN.Discriminator}}
+\doxysubsubsection{\texorpdfstring{func\_params}{func\_params}}
+{\footnotesize\ttfamily c\+WGAN.\+Discriminator.\+func\+\_\+params}
+
+\mbox{\Hypertarget{classcWGAN_1_1Discriminator_a5a86f98eded16aa498aff0801f58c8c5}\label{classcWGAN_1_1Discriminator_a5a86f98eded16aa498aff0801f58c8c5}} 
+\index{cWGAN.Discriminator@{cWGAN.Discriminator}!genout@{genout}}
+\index{genout@{genout}!cWGAN.Discriminator@{cWGAN.Discriminator}}
+\doxysubsubsection{\texorpdfstring{genout}{genout}}
+{\footnotesize\ttfamily c\+WGAN.\+Discriminator.\+genout}
+
+\mbox{\Hypertarget{classcWGAN_1_1Discriminator_a9fb9181e235cf360eada9862b984980a}\label{classcWGAN_1_1Discriminator_a9fb9181e235cf360eada9862b984980a}} 
+\index{cWGAN.Discriminator@{cWGAN.Discriminator}!out@{out}}
+\index{out@{out}!cWGAN.Discriminator@{cWGAN.Discriminator}}
+\doxysubsubsection{\texorpdfstring{out}{out}}
+{\footnotesize\ttfamily c\+WGAN.\+Discriminator.\+out}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+model/\mbox{\hyperlink{cWGAN_8py}{c\+WGAN.\+py}}\end{DoxyCompactItemize}

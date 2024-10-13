@@ -1,0 +1,139 @@
+\hypertarget{namespaceinference}{}\doxysection{inference Namespace Reference}
+\label{namespaceinference}\index{inference@{inference}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+None \mbox{\hyperlink{namespaceinference_aa06d5f0353f879be2f427e3fce89d911}{inference}} (cgan.\+Generator \mbox{\hyperlink{namespaceinference_aabd2bc6fea684f0c11304eb7ff6e99a9}{model}}, \mbox{\hyperlink{classutils_1_1Params}{utils.\+Params}} \mbox{\hyperlink{namespaceinference_a22c269ca05e27206f2fc065405415d56}{params}}, list \mbox{\hyperlink{namespaceinference_acfef38db1dbb2046d798a818c9750b8e}{condition}}, str location\+\_\+csv, str output\+\_\+folder, \mbox{\hyperlink{namespaceinference_ab5ea03382b07e65335306d9f924c2944}{scaler\+\_\+condition}}, \mbox{\hyperlink{namespaceinference_ad22cb32e92385acd46c0e788525e3622}{scaler\+\_\+output}}, str coordinate\+\_\+type)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespaceinference_ab31588c543457ebe7ba62ffcff222884}{parser}} = argparse.\+Argument\+Parser()
+\item 
+\mbox{\hyperlink{namespaceinference_a57022e12b37ab04345b633b4cbf5dd30}{default}}
+\item 
+\mbox{\hyperlink{namespaceinference_a760989678ef55317c08a0a2dd6615e4f}{help}}
+\item 
+\mbox{\hyperlink{namespaceinference_a6b0cd3d1be6fb0b76d8f1c46af853dc9}{args}} = parser.\+parse\+\_\+args()
+\item 
+\mbox{\hyperlink{namespaceinference_a22c269ca05e27206f2fc065405415d56}{params}} = \mbox{\hyperlink{classutils_1_1Params}{utils.\+Params}}(args.\+params\+\_\+path)
+\item 
+\mbox{\hyperlink{namespaceinference_a790bc9ca93ff600fac98629357678e76}{cuda}}
+\item 
+\mbox{\hyperlink{namespaceinference_ab5ea03382b07e65335306d9f924c2944}{scaler\+\_\+condition}} = joblib.\+load(os.\+path.\+join(args.\+data\+\_\+dir, \textquotesingle{}scaler\+\_\+condition.\+pkl\textquotesingle{}))
+\item 
+\mbox{\hyperlink{namespaceinference_ad22cb32e92385acd46c0e788525e3622}{scaler\+\_\+output}} = joblib.\+load(os.\+path.\+join(args.\+data\+\_\+dir, \textquotesingle{}scaler\+\_\+output.\+pkl\textquotesingle{}))
+\item 
+\mbox{\hyperlink{namespaceinference_aabd2bc6fea684f0c11304eb7ff6e99a9}{model}} = cgan.\+Generator(\mbox{\hyperlink{namespaceinference_a22c269ca05e27206f2fc065405415d56}{params}})
+\item 
+\mbox{\hyperlink{namespaceinference_a0d65a5c4d72b10f0f9efaa823edf4964}{checkpoint\+\_\+dir}} = os.\+path.\+join(args.\+test\+\_\+dir, \textquotesingle{}checkpoints\textquotesingle{})
+\item 
+\mbox{\hyperlink{namespaceinference_a5e721199d73e00f45c84a9f8cea98113}{model\+\_\+path}} = os.\+path.\+join(\mbox{\hyperlink{namespaceinference_a0d65a5c4d72b10f0f9efaa823edf4964}{checkpoint\+\_\+dir}}, args.\+restore\+\_\+file)
+\item 
+list \mbox{\hyperlink{namespaceinference_acfef38db1dbb2046d798a818c9750b8e}{condition}} = \mbox{[}float(i) for i in args.\+condition.\+split(\textquotesingle{}-\/\textquotesingle{})\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespaceinference_aa06d5f0353f879be2f427e3fce89d911}\label{namespaceinference_aa06d5f0353f879be2f427e3fce89d911}} 
+\index{inference@{inference}!inference@{inference}}
+\index{inference@{inference}!inference@{inference}}
+\doxysubsubsection{\texorpdfstring{inference()}{inference()}}
+{\footnotesize\ttfamily  None inference.\+inference (\begin{DoxyParamCaption}\item[{cgan.\+Generator}]{model,  }\item[{\mbox{\hyperlink{classutils_1_1Params}{utils.\+Params}}}]{params,  }\item[{list}]{condition,  }\item[{str}]{location\+\_\+csv,  }\item[{str}]{output\+\_\+folder,  }\item[{}]{scaler\+\_\+condition,  }\item[{}]{scaler\+\_\+output,  }\item[{str}]{coordinate\+\_\+type }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Perform inference using the trained generator.
+
+@param model Trained generator model.
+@param params Model hyperparameters.
+@param condition Input condition vector as a list of floats.
+@param location_csv Path to the CSV file containing coordinates.
+@param output_folder Folder to save the generated images.
+@param scaler_condition Scaler used to normalize the condition vector.
+@param scaler_output Scaler used to inverse transform the output vector.
+@param coordinate_type Coordinate system type, either 'cartesian' or 'polar'.
+
+@return None
+\end{DoxyVerb}
+ Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespaceinference_aa06d5f0353f879be2f427e3fce89d911_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespaceinference_a6b0cd3d1be6fb0b76d8f1c46af853dc9}\label{namespaceinference_a6b0cd3d1be6fb0b76d8f1c46af853dc9}} 
+\index{inference@{inference}!args@{args}}
+\index{args@{args}!inference@{inference}}
+\doxysubsubsection{\texorpdfstring{args}{args}}
+{\footnotesize\ttfamily inference.\+args = parser.\+parse\+\_\+args()}
+
+\mbox{\Hypertarget{namespaceinference_a0d65a5c4d72b10f0f9efaa823edf4964}\label{namespaceinference_a0d65a5c4d72b10f0f9efaa823edf4964}} 
+\index{inference@{inference}!checkpoint\_dir@{checkpoint\_dir}}
+\index{checkpoint\_dir@{checkpoint\_dir}!inference@{inference}}
+\doxysubsubsection{\texorpdfstring{checkpoint\_dir}{checkpoint\_dir}}
+{\footnotesize\ttfamily inference.\+checkpoint\+\_\+dir = os.\+path.\+join(args.\+test\+\_\+dir, \textquotesingle{}checkpoints\textquotesingle{})}
+
+\mbox{\Hypertarget{namespaceinference_acfef38db1dbb2046d798a818c9750b8e}\label{namespaceinference_acfef38db1dbb2046d798a818c9750b8e}} 
+\index{inference@{inference}!condition@{condition}}
+\index{condition@{condition}!inference@{inference}}
+\doxysubsubsection{\texorpdfstring{condition}{condition}}
+{\footnotesize\ttfamily list inference.\+condition = \mbox{[}float(i) for i in args.\+condition.\+split(\textquotesingle{}-\/\textquotesingle{})\mbox{]}}
+
+\mbox{\Hypertarget{namespaceinference_a790bc9ca93ff600fac98629357678e76}\label{namespaceinference_a790bc9ca93ff600fac98629357678e76}} 
+\index{inference@{inference}!cuda@{cuda}}
+\index{cuda@{cuda}!inference@{inference}}
+\doxysubsubsection{\texorpdfstring{cuda}{cuda}}
+{\footnotesize\ttfamily inference.\+cuda}
+
+\mbox{\Hypertarget{namespaceinference_a57022e12b37ab04345b633b4cbf5dd30}\label{namespaceinference_a57022e12b37ab04345b633b4cbf5dd30}} 
+\index{inference@{inference}!default@{default}}
+\index{default@{default}!inference@{inference}}
+\doxysubsubsection{\texorpdfstring{default}{default}}
+{\footnotesize\ttfamily inference.\+default}
+
+\mbox{\Hypertarget{namespaceinference_a760989678ef55317c08a0a2dd6615e4f}\label{namespaceinference_a760989678ef55317c08a0a2dd6615e4f}} 
+\index{inference@{inference}!help@{help}}
+\index{help@{help}!inference@{inference}}
+\doxysubsubsection{\texorpdfstring{help}{help}}
+{\footnotesize\ttfamily inference.\+help}
+
+\mbox{\Hypertarget{namespaceinference_aabd2bc6fea684f0c11304eb7ff6e99a9}\label{namespaceinference_aabd2bc6fea684f0c11304eb7ff6e99a9}} 
+\index{inference@{inference}!model@{model}}
+\index{model@{model}!inference@{inference}}
+\doxysubsubsection{\texorpdfstring{model}{model}}
+{\footnotesize\ttfamily inference.\+model = cgan.\+Generator(\mbox{\hyperlink{namespaceinference_a22c269ca05e27206f2fc065405415d56}{params}})}
+
+\mbox{\Hypertarget{namespaceinference_a5e721199d73e00f45c84a9f8cea98113}\label{namespaceinference_a5e721199d73e00f45c84a9f8cea98113}} 
+\index{inference@{inference}!model\_path@{model\_path}}
+\index{model\_path@{model\_path}!inference@{inference}}
+\doxysubsubsection{\texorpdfstring{model\_path}{model\_path}}
+{\footnotesize\ttfamily inference.\+model\+\_\+path = os.\+path.\+join(\mbox{\hyperlink{namespaceinference_a0d65a5c4d72b10f0f9efaa823edf4964}{checkpoint\+\_\+dir}}, args.\+restore\+\_\+file)}
+
+\mbox{\Hypertarget{namespaceinference_a22c269ca05e27206f2fc065405415d56}\label{namespaceinference_a22c269ca05e27206f2fc065405415d56}} 
+\index{inference@{inference}!params@{params}}
+\index{params@{params}!inference@{inference}}
+\doxysubsubsection{\texorpdfstring{params}{params}}
+{\footnotesize\ttfamily inference.\+params = \mbox{\hyperlink{classutils_1_1Params}{utils.\+Params}}(args.\+params\+\_\+path)}
+
+\mbox{\Hypertarget{namespaceinference_ab31588c543457ebe7ba62ffcff222884}\label{namespaceinference_ab31588c543457ebe7ba62ffcff222884}} 
+\index{inference@{inference}!parser@{parser}}
+\index{parser@{parser}!inference@{inference}}
+\doxysubsubsection{\texorpdfstring{parser}{parser}}
+{\footnotesize\ttfamily inference.\+parser = argparse.\+Argument\+Parser()}
+
+\mbox{\Hypertarget{namespaceinference_ab5ea03382b07e65335306d9f924c2944}\label{namespaceinference_ab5ea03382b07e65335306d9f924c2944}} 
+\index{inference@{inference}!scaler\_condition@{scaler\_condition}}
+\index{scaler\_condition@{scaler\_condition}!inference@{inference}}
+\doxysubsubsection{\texorpdfstring{scaler\_condition}{scaler\_condition}}
+{\footnotesize\ttfamily inference.\+scaler\+\_\+condition = joblib.\+load(os.\+path.\+join(args.\+data\+\_\+dir, \textquotesingle{}scaler\+\_\+condition.\+pkl\textquotesingle{}))}
+
+\mbox{\Hypertarget{namespaceinference_ad22cb32e92385acd46c0e788525e3622}\label{namespaceinference_ad22cb32e92385acd46c0e788525e3622}} 
+\index{inference@{inference}!scaler\_output@{scaler\_output}}
+\index{scaler\_output@{scaler\_output}!inference@{inference}}
+\doxysubsubsection{\texorpdfstring{scaler\_output}{scaler\_output}}
+{\footnotesize\ttfamily inference.\+scaler\+\_\+output = joblib.\+load(os.\+path.\+join(args.\+data\+\_\+dir, \textquotesingle{}scaler\+\_\+output.\+pkl\textquotesingle{}))}
+

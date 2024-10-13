@@ -1,0 +1,45 @@
+\hypertarget{generate_8py}{}\doxysection{generate.\+py File Reference}
+\label{generate_8py}\index{generate.py@{generate.py}}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacegenerate}{generate}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+None \mbox{\hyperlink{namespacegenerate_af3cd845efd4ac8cb38fc996978db0ea0}{generate.\+generate\+\_\+images}} (cgan.\+Generator model, \mbox{\hyperlink{classutils_1_1Params}{utils.\+Params}} params, Data\+Loader dataloader, str output\+\_\+folder, str location\+\_\+csv, scaler\+\_\+condition, scaler\+\_\+output, str coordinate\+\_\+type)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacegenerate_a17a1c434a40b228f25748ab35b718f04}{generate.\+parser}} = argparse.\+Argument\+Parser()
+\item 
+\mbox{\hyperlink{namespacegenerate_aebaa0dc34dc7547700be9a8455325bd4}{generate.\+default}}
+\item 
+\mbox{\hyperlink{namespacegenerate_a36cbee60b5d815661735944a05134129}{generate.\+help}}
+\item 
+\mbox{\hyperlink{namespacegenerate_a0c5a3d86032ffead1cfe760264456a23}{generate.\+args}} = parser.\+parse\+\_\+args()
+\item 
+\mbox{\hyperlink{namespacegenerate_ab11b0167507379b1fc6e19b7503bb2cd}{generate.\+json\+\_\+path}} = os.\+path.\+join(args.\+test\+\_\+dir, \char`\"{}params.\+json\char`\"{})
+\item 
+\mbox{\hyperlink{namespacegenerate_a6dc882368eff41437d5e89d8728804f8}{generate.\+params}} = \mbox{\hyperlink{classutils_1_1Params}{utils.\+Params}}(json\+\_\+path)
+\item 
+\mbox{\hyperlink{namespacegenerate_a23ba1e6e45f2021b9937d60be3dc299a}{generate.\+cuda}}
+\item 
+\mbox{\hyperlink{namespacegenerate_ac7f73ed7ac0c976b04008d5b43fa3ca1}{generate.\+output\+\_\+folder}} = os.\+path.\+join(args.\+test\+\_\+dir, \textquotesingle{}generated\+\_\+images\textquotesingle{})
+\item 
+\mbox{\hyperlink{namespacegenerate_a2db0c73d7557926bac170716626077df}{generate.\+scaler\+\_\+condition}} = joblib.\+load(os.\+path.\+join(args.\+data\+\_\+dir, \textquotesingle{}scaler\+\_\+condition.\+pkl\textquotesingle{}))
+\item 
+\mbox{\hyperlink{namespacegenerate_a752768af1a66d3d45791a3ac99a5bb8a}{generate.\+scaler\+\_\+output}} = joblib.\+load(os.\+path.\+join(args.\+data\+\_\+dir, \textquotesingle{}scaler\+\_\+output.\+pkl\textquotesingle{}))
+\item 
+\mbox{\hyperlink{namespacegenerate_a24fdde99e647b8ac3885c69bbda507e9}{generate.\+dataset}} = DD(os.\+path.\+join(args.\+data\+\_\+dir, \textquotesingle{}train.\+json\textquotesingle{}))
+\item 
+\mbox{\hyperlink{namespacegenerate_a7b6f3ac4d1476068f8fe208a953afe63}{generate.\+dl}}
+\item 
+\mbox{\hyperlink{namespacegenerate_aee97a3ee314a88b959a4f22cf1a26aa4}{generate.\+model}} = cgan.\+Generator(params).cuda() if params.\+cuda else cgan.\+Generator(params)
+\item 
+\mbox{\hyperlink{namespacegenerate_ac5e91b61e65be0b10c1b24e086d07f0d}{generate.\+checkpoint\+\_\+dir}} = os.\+path.\+join(args.\+test\+\_\+dir, \textquotesingle{}checkpoints\textquotesingle{})
+\item 
+\mbox{\hyperlink{namespacegenerate_ad64a30ab590fea8728e39f93c24af585}{generate.\+model\+\_\+path}} = os.\+path.\+join(checkpoint\+\_\+dir, args.\+restore\+\_\+file)
+\end{DoxyCompactItemize}

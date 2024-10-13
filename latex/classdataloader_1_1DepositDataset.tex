@@ -1,0 +1,105 @@
+\hypertarget{classdataloader_1_1DepositDataset}{}\doxysection{dataloader.\+Deposit\+Dataset Class Reference}
+\label{classdataloader_1_1DepositDataset}\index{dataloader.DepositDataset@{dataloader.DepositDataset}}
+
+
+Inheritance diagram for dataloader.\+Deposit\+Dataset\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=227pt]{classdataloader_1_1DepositDataset__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for dataloader.\+Deposit\+Dataset\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=227pt]{classdataloader_1_1DepositDataset__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+None \mbox{\hyperlink{classdataloader_1_1DepositDataset_a5748f789187b14782d95641e1fd5cfbe}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, str json\+\_\+file)
+\item 
+int \mbox{\hyperlink{classdataloader_1_1DepositDataset_aedec84b2132be12b10f96187064c67fe}{\+\_\+\+\_\+len\+\_\+\+\_\+}} (self)
+\item 
+def \mbox{\hyperlink{classdataloader_1_1DepositDataset_a142f16e23633e6845d8c924ce0cbd356}{\+\_\+\+\_\+getitem\+\_\+\+\_\+}} (self, int idx)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classdataloader_1_1DepositDataset_a8e84f0e5c876c219688879d3676a2bdb}{data}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}A custom PyTorch Dataset class to load the normalized dataset from a JSON file.
+
+The dataset is expected to contain condition and output data, both of which are
+stored as normalized floating-point arrays. This class makes it easy to iterate
+through the dataset in batches during model training and evaluation.
+
+@param json_file Path to the normalized JSON file created by preprocess.py.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classdataloader_1_1DepositDataset_a5748f789187b14782d95641e1fd5cfbe}\label{classdataloader_1_1DepositDataset_a5748f789187b14782d95641e1fd5cfbe}} 
+\index{dataloader.DepositDataset@{dataloader.DepositDataset}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!dataloader.DepositDataset@{dataloader.DepositDataset}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily  None dataloader.\+Deposit\+Dataset.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{str}]{json\+\_\+file }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Initialize the dataset by loading data from the provided JSON file.
+
+@param json_file Path to the normalized JSON file.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdataloader_1_1DepositDataset_a142f16e23633e6845d8c924ce0cbd356}\label{classdataloader_1_1DepositDataset_a142f16e23633e6845d8c924ce0cbd356}} 
+\index{dataloader.DepositDataset@{dataloader.DepositDataset}!\_\_getitem\_\_@{\_\_getitem\_\_}}
+\index{\_\_getitem\_\_@{\_\_getitem\_\_}!dataloader.DepositDataset@{dataloader.DepositDataset}}
+\doxysubsubsection{\texorpdfstring{\_\_getitem\_\_()}{\_\_getitem\_\_()}}
+{\footnotesize\ttfamily def dataloader.\+Deposit\+Dataset.\+\_\+\+\_\+getitem\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{int}]{idx }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Retrieve a single data point (condition and output) from the dataset by index.
+
+This method is required by the PyTorch Dataset class and is used to
+index into the dataset and return a specific sample. Both the condition
+and the output are returned as tensors.
+
+@param idx The index of the data point to retrieve.
+
+@return tuple A tuple containing:
+    - condition_tensor (torch.Tensor): The condition vector.
+    - output_tensor (torch.Tensor): The output vector (target).
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classdataloader_1_1DepositDataset_aedec84b2132be12b10f96187064c67fe}\label{classdataloader_1_1DepositDataset_aedec84b2132be12b10f96187064c67fe}} 
+\index{dataloader.DepositDataset@{dataloader.DepositDataset}!\_\_len\_\_@{\_\_len\_\_}}
+\index{\_\_len\_\_@{\_\_len\_\_}!dataloader.DepositDataset@{dataloader.DepositDataset}}
+\doxysubsubsection{\texorpdfstring{\_\_len\_\_()}{\_\_len\_\_()}}
+{\footnotesize\ttfamily  int dataloader.\+Deposit\+Dataset.\+\_\+\+\_\+len\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return the total number of data points in the dataset.
+
+This method is required by the PyTorch Dataset class.
+
+@return int The size of the dataset.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classdataloader_1_1DepositDataset_a8e84f0e5c876c219688879d3676a2bdb}\label{classdataloader_1_1DepositDataset_a8e84f0e5c876c219688879d3676a2bdb}} 
+\index{dataloader.DepositDataset@{dataloader.DepositDataset}!data@{data}}
+\index{data@{data}!dataloader.DepositDataset@{dataloader.DepositDataset}}
+\doxysubsubsection{\texorpdfstring{data}{data}}
+{\footnotesize\ttfamily dataloader.\+Deposit\+Dataset.\+data}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+model/\mbox{\hyperlink{dataloader_8py}{dataloader.\+py}}\end{DoxyCompactItemize}
